@@ -4,7 +4,6 @@ The coding standards for developers at Nooijen Web Solutions to ensure code heal
 
 ## To do
 
-* Add all stuff from the current PDF file
 * Go more in depth to get some more info about certain js/css stuff
 * Add default folder structure of a project
 * Add the following files:
@@ -36,6 +35,7 @@ Points that will be discussed in this Coding Standards file
 
 There are some general rules that should be followed at all times.
 
+* **Write clean code**
 * Work in a structured way! This is important to improve code quality and make it easier for your colleagues to work on the same project
 * DRY! Don't repeat yourself! Don't build long functions for everything, but try to use smaller more modular (functional programming like) functions, write your code in a functional, and modular way
 * Use a clear folder structure, more on this in the *Git* section of this file
@@ -145,9 +145,26 @@ There are some general rules that should be followed at all times.
 
 # PHP
 
+* For server side stuff we prefer using NodeJS over PHP, so only use PHP when really needed
+* Use a clean folder structure and use included to add other files. Make sure files won't get longer than 200 lines
+* For reasonably sized projects, use the MVC structure
+* If you are storing user data, especially passwords, you **must** use a framework like Laravel, because you really *really* shouldn't mess with storing that stuff yourself
+* PHP is notorious for ugly code, so be aware of this and write your code clean
+* Always use PHP 7.1+
+
 # WordPress
 
+This is an extension of the PHP part of this file.
+
 * Always write your WordPress code along the rules of the [WordPress Codex](https://codex.wordpress.org/)
+* Write variables using underscores, not camel-case, because WordPress does not allow camel-case, so write variables like `this_is_an_example`
+* Don't change anything in the core files or existing plugins/themes! Use hooks, make a plugin out of it, or add it to the child theme
+* Never hardcode any paths, use functions like `get_stylesheet_directory_uri`
+* Never write MySQL queries yourself, use `$wpdb`
+* Enqueue your stylesheets by hand, not just in the style.css file
+* For your custom styles and scripts, use Webpack or Gulp
+* Use separate development, staging and production environments
+* If possible, use the tools from [Roots.io](https://roots.io/)
 
 # Final words
 
@@ -162,11 +179,13 @@ The following sources are used for the creation of this Coding Guidelines file, 
 * [SASS Guidelin.es](https://sass-guidelin.es/), please read [this](https://sass-guidelin.es/#too-long-didnt-read) part for some great tips
 * [Gitignore creator](https://www.gitignore.io/)
 * [WordPress Codex](https://codex.wordpress.org/)
+* [Roots.io](https://roots.io/)
 
 #### Starter packs
 * [HTML-Starter-Kit](https://github.com/AllStarterKits/HTML-Starter-Kit)
 * [NodeJS-Starter-Kit](https://github.com/AllStarterKits/NodeJS-Starter-Kit)
 * [MEAN-Starter-Kit](https://github.com/AllStarterKits/MEAN-Starter-Kit)
+* WordPress framework - coming soon
 
 #### Contributors
 
