@@ -67,10 +67,38 @@ There are some general rules that should be followed at all times.
 
 * Never use inline styling and always use external files to include styling and scripts
 * Use `<link rel="stylesheet" href="style.css">` and not `@import` to add styling. For script use `<script src="codeguide.js" />`
+* For custom written code, you can include just 1 script file and 1 stylesheet, so combine everything using Gulp or Webpack
 * For images, always add an `alt` tag
 * Write your code with XHTML in mind, so use `<br/>` and not just `<br>`, because there is always a chance your code will later be converted into a React app
 * Use HTML5 elements, so use `<article>, <nav>, <aside>, <details>, <header>, <footer>, <section>`, and not just `<div>`
-* 
+* For templating, you can always use Handlebars. If you like to use another templating engine like, like Pug or ejs, discuss this with your superior
+* Use the following order of attributes on HTML-elements:
+  * src, for, type, href, value
+  * id, name
+  * class
+  * data-*
+  * title, alt
+  * role, aria-*
+* Use the following "basic" structure for HTML documents
+```html
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="tekst">
+    <meta name="keywords" content="tekst">
+    <title>Document</title>
+    [css dependencies]
+    [font dependencies]
+  </head>
+  <body>
+  Content goes here
+  [javascript dependencies]
+  </body>
+</html>
+```
 
 # CSS
 
