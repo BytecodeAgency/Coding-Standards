@@ -13,7 +13,7 @@ The coding standards for developers at Nooijen Web Solutions to ensure code heal
   * .babelrc
   * .travis.yml
   * .gitignore
-  * scss folder structure
+  * Gulpfile.js
 * Add links to starter packs for MEAN, Node and HTML/Handlebars
 
 ## About
