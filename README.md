@@ -5,7 +5,6 @@ The coding standards for developers at Nooijen Web Solutions to ensure code heal
 ## To do
 
 * Add all stuff from the current PDF file
-* Add stuff from Asana to here as addition of the PDF
 * Go more in depth to get some more info about certain js/css stuff
 * Add default folder structure of a project
 * Add the following files:
@@ -13,7 +12,6 @@ The coding standards for developers at Nooijen Web Solutions to ensure code heal
   * .babelrc
   * .travis.yml
   * Gulpfile.js
-* Add links to starter packs for MEAN, Node and HTML/Handlebars
 
 ## About
 
@@ -42,6 +40,7 @@ There are some general rules that should be followed at all times.
 * DRY! Don't repeat yourself! Don't build long functions for everything, but try to use smaller more modular (functional programming like) functions, write your code in a functional, and modular way
 * Use a clear folder structure, more on this in the *Git* section of this file
 * Don't use "Yoda" conditions
+* Use camelCase and use single quotes (unless the language does not allow this)
 * Always indent using 4 spaces, in all files. If you are using tabs, set your code editor to convert tabs to 4 spaces
 * Lines should never exceed 150 characters (spaces included)
 * For single line comments, use `// comment`, for multi-line comments, use `/** * comment */` styled comments in a Javadoc styled way
@@ -117,6 +116,7 @@ There are some general rules that should be followed at all times.
 * A zero (0) should not have unit
 * Try to work with floats as little as possible, rather use flexbox or CSS grids
 * If you are writing emails, use the MJML preprocessor
+* For production, remove source maps and minify the code
 
 # Preprocessors for CSS
 
@@ -137,8 +137,11 @@ There are some general rules that should be followed at all times.
 * Use Yarn as a package manager, not NPM
 * The usage of Typescript is encouraged
 * For linting, use ESLint
-* Write your code in ESNext, and transpile using Babel
+* Write your code in ESNext/ES6+, and transpile using Babel to ES5 because Internet Explorer
 * Before adding a library, discuss this with your superior
+* Don't use anonymous functions (`function test() {}`), write them like this: `const test = () => {}`
+* When using jQuery, write it using `$('selector');` and not using `jQuery('selector');`
+* For production, uglify/minify your code and remove source maps
 
 # PHP
 
@@ -159,6 +162,11 @@ The following sources are used for the creation of this Coding Guidelines file, 
 * [SASS Guidelin.es](https://sass-guidelin.es/), please read [this](https://sass-guidelin.es/#too-long-didnt-read) part for some great tips
 * [Gitignore creator](https://www.gitignore.io/)
 * [WordPress Codex](https://codex.wordpress.org/)
+
+#### Starter packs
+* [HTML-Starter-Kit](https://github.com/AllStarterKits/HTML-Starter-Kit)
+* [NodeJS-Starter-Kit](https://github.com/AllStarterKits/NodeJS-Starter-Kit)
+* [MEAN-Starter-Kit](https://github.com/AllStarterKits/MEAN-Starter-Kit)
 
 #### Contributors
 
