@@ -61,6 +61,7 @@ There are some general rules that should be followed at all times.
 * If your project uses a set of dependencies (like Mongo and Node) working together in a complex way, write a Dockerfile or Docker Compose file
 * Always write a clear description for your commit so it is clear what was changed or added, so not just `"styling updates"`, but rather `"improved styling for the menu dropdown"`
 * If your commit is to fix a Jira issue, include the issue number in your commit message
+* Try to commit around every hour or two or after important milestones
 
 # HTML
 
@@ -72,12 +73,12 @@ There are some general rules that should be followed at all times.
 * Use HTML5 elements, so use `<article>, <nav>, <aside>, <details>, <header>, <footer>, <section>`, and not just `<div>`
 * For templating, you can always use Handlebars. If you like to use another templating engine like, like Pug or ejs, discuss this with your superior
 * Use the following order of attributes on HTML-elements:
-  * src, for, type, href, value
-  * id, name
-  * class
-  * data-*
-  * title, alt
-  * role, aria-*
+  1. src, for, type, href, value
+  2. id, name
+  3. class
+  4. data-*
+  5. title, alt
+  6. role, aria-*
 * Use the following "basic" structure for HTML documents
 
 ```html
