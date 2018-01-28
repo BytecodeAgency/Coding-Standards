@@ -39,17 +39,18 @@ Points that will be discussed in this Coding Standards file
 There are some general rules that should be followed at all times.
 
 * Work in a structured way! This is important to improve code quality and make it easier for your colleagues to work on the same project
-* DRY! Don't repeat yourself! Don't build long functions for everything, but try to use smaller more modular (functional programming like) functions
+* DRY! Don't repeat yourself! Don't build long functions for everything, but try to use smaller more modular (functional programming like) functions, write your code in a functional, and modular way
 * Use a clear folder structure, more on this in the *Git* section of this file
 * Don't use "Yoda" conditions
 * Always indent using 4 spaces, in all files. If you are using tabs, set your code editor to convert tabs to 4 spaces
 * Lines should never exceed 150 characters (spaces included)
 * For single line comments, use `// comment`, for multi-line comments, use `/** * comment */` styled comments in a Javadoc styled way
-* Always document your code.
+* Always document your code, be generous with commenting
 * If you are writing a part of a project that is critical to work because other systems rely on it, you must write unit tests to make sure the other parts of the systems will still work
 * Make sure your code is readable. This means using clear names for your functions, adding enough (although not too many) comments and adding enough and a consistent amount of whitespace
 * Always use linters when you are writing code, and let the linter check your code before committing on Git
 * When starting on a project, always pick the best tool for the job, we are not thinking inside of the box, but always discuss this with your superior
+* Always write your code with the latest techniques, and let tools like Babel or PostCSS take care or backwards compatibility
 * Before working on a project, always discuss with the other developers on the approach and points you and your team should focus on during the project
 
 # Git
@@ -79,6 +80,7 @@ There are some general rules that should be followed at all times.
   * title, alt
   * role, aria-*
 * Use the following "basic" structure for HTML documents
+
 ```html
 <!DOCTYPE html>
 <html lang="nl">
@@ -101,13 +103,48 @@ There are some general rules that should be followed at all times.
 
 # CSS
 
+* Try not to use CSS, rather use SASS/SCSS
+* We strive to use as few CSS frameworks as possible. So only include a CSS framework/library after discussing with your superior
+* If you are using Bootstrap, you can use Bootstrap 4, not Bootstrap 3, only if you have to work with legacy code that already includes Bootstrap 3
+* If you are using another framework that uses px-units, use px, else use rem-values.
+* There should only be a maximum of 2 CSS files per page (this prevents HTTP requests)
+* List related items together
+* If a :hover pseudo class is styled, :focus should also be styled for accessibility
+* Use BEM for naming CSS classes
+* Name classes in a way it is clear to what is is about
+* For font-sizes, use an exponential scale, preferably based on the Fibonacci number (1.618)
+* For colors, use hex values (not rgb or rgba), as short as possible, and in lowercase, so don't use `#FFFFFF` but use `#fff` instead
+* A zero (0) should not have unit
+* Try to work with floats as little as possible, rather use flexbox or CSS grids
+* If you are writing emails, use the MJML preprocessor
+
 # Preprocessors for CSS
 
+* Currently, SCSS is preferred for a project. If you want to use something else, discuss this with your superior.
+* Make use of the functionalities the preprocessor gives you! Don't do stuff yourself that a preprocessor can take care off for you
+* You can compile your code to CSS using Webpack or Gulp
+* Don't go and add prefixes by hand. Instead, let a plugin handle this for you
+* Try to use nesting at least as possible, rather use BEM. Use the nesting mostly for :hover-states etc.
+* Only nest 3 levels deep
+* Break files out into small modules (avoid having a file that is larger than 100 lines)
+* Avoid using IDs throughout the site. Use IDs for parent elements. Example: Header, Footer, Main. Using Classes avoids having to use !important
+* For shameful code, use the _shame.scss file
+* Use the folder structure as given in this project
+
 # Javascript
+
+* If possible, use vanilla Javascript, so don't add jQuery just for a simple DOM manipulation or a simple API call
+* Use Yarn as a package manager, not NPM
+* The usage of Typescript is encouraged
+* For linting, use ESLint
+* Write your code in ESNext, and transpile using Babel
+* Before adding a library, discuss this with your superior
 
 # PHP
 
 # WordPress
+
+* Always write your WordPress code along the rules of the [WordPress Codex](https://codex.wordpress.org/)
 
 # Final words
 
@@ -119,8 +156,9 @@ The following sources are used for the creation of this Coding Guidelines file, 
 
 * [Airbnb Javascript standards](https://github.com/airbnb/javascript)
 * [Sitepoint SASS project architecture](https://www.sitepoint.com/architecture-sass-project/)
-* [SASS Guidelin.es](https://sass-guidelin.es/#extend)
+* [SASS Guidelin.es](https://sass-guidelin.es/), please read [this](https://sass-guidelin.es/#too-long-didnt-read) part for some great tips
 * [Gitignore creator](https://www.gitignore.io/)
+* [WordPress Codex](https://codex.wordpress.org/)
 
 #### Contributors
 
