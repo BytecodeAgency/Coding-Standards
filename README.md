@@ -12,7 +12,6 @@ The coding standards for developers at Nooijen Web Solutions to ensure code heal
   * .eslintrc
   * .babelrc
   * .travis.yml
-  * .gitignore
   * Gulpfile.js
 * Add links to starter packs for MEAN, Node and HTML/Handlebars
 
@@ -121,6 +120,7 @@ The following sources are used for the creation of this Coding Guidelines file, 
 * [Airbnb Javascript standards](https://github.com/airbnb/javascript)
 * [Sitepoint SASS project architecture](https://www.sitepoint.com/architecture-sass-project/)
 * [SASS Guidelin.es](https://sass-guidelin.es/#extend)
+* [Gitignore creator](https://www.gitignore.io/)
 
 #### Contributors
 
