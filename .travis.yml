@@ -1,0 +1,31 @@
+language: node_js
+
+node_js:
+  - "stable"
+  - "node"
+  - "lts/*"
+  - "8"
+  - "7"
+  - "6"
+  - "5"
+  - "4"
+
+notifications:
+  email:
+    receipients:
+      - info@nooijensolutions.nl
+
+# before_install:
+
+install:
+  - yarn
+
+# before_script:
+
+# script:
+  # - npm test
+
+cache:
+  yarn: true
+  directories:
+    - node_modules

@@ -6,11 +6,6 @@ The coding standards for developers at Nooijen Web Solutions to ensure code heal
 
 * Go more in depth to get some more info about certain js/css stuff
 * Add default folder structure of a project
-* Add the following files:
-  * .eslintrc
-  * .babelrc
-  * .travis.yml
-  * Gulpfile.js
 
 ## About
 
@@ -50,6 +45,9 @@ There are some general rules that should be followed at all times.
 * Always use linters when you are writing code, and let the linter check your code before committing on Git
 * When starting on a project, always pick the best tool for the job, we are not thinking inside of the box, but always discuss this with your superior
 * Always write your code with the latest techniques, and let tools like Babel or PostCSS take care or backwards compatibility
+* All communication on Jira and all documentation (and everything else in Git repos) should be in English
+* For security reasons, try to avoid using FTP, rather use SFTP, or connect through SSH and pull from the Git repo (with a deploy key)
+* When using SSH, if possible, use an SSH-key, and not just a password, this is to improve security
 * Before working on a project, always discuss with the other developers on the approach and points you and your team should focus on during the project
 
 # Git
