@@ -2,38 +2,35 @@
 
 The coding standards for developers at Nooijen Web Solutions to ensure code health and quality of the products delivered to our clients.
 
-## To do
-
-* Go more in depth to get some more info about certain js/css stuff
-* Add default folder structure of a project
-
 ## About
 
 Please use these standards in every line of code you write. This is not to bully you but to make sure everyone in our company writes code the same way, and this is the only way to assure quality of our code.
 
 This repo also contains files you can use for development. These files are *defaults*, so you can of course edit them to suit the needs of the project.
 
+Please read this file very thoroughly, and also check out the links in the [Final words](#Final words) section. Spending half an hour now can save you many hours during projects!
+
 # Table of Contents
 
 Points that will be discussed in this Coding Standards file
 
-* General
-* Git
-* HTML
-* CSS
-* Preprocessors for CSS
-* Javascript
-* PHP
-* WordPress
+* [General](#general)
+* [Git](#git)
+* [HTML](#html)
+* [CSS](#css)
+* [CSS-preprocessors](#css-preprocessors)
+* [Javascript](#javascript)
+* [PHP](#php)
+* [WordPress](#wordpress)
 
 # General
 
 There are some general rules that should be followed at all times.
 
-* **Write clean code**
+* **Write clean code!**
 * Work in a structured way! This is important to improve code quality and make it easier for your colleagues to work on the same project
 * DRY! Don't repeat yourself! Don't build long functions for everything, but try to use smaller more modular (functional programming like) functions, write your code in a functional, and modular way
-* Use a clear folder structure, more on this in the *Git* section of this file
+* Use a clear folder structure, more on this in the [Git](#Git) section of this file
 * Don't use "Yoda" conditions
 * Use camelCase and use single quotes (unless the language does not allow this)
 * Always indent using 4 spaces, in all files. If you are using tabs, set your code editor to convert tabs to 4 spaces
@@ -45,6 +42,7 @@ There are some general rules that should be followed at all times.
 * Always use linters when you are writing code, and let the linter check your code before committing on Git
 * When starting on a project, always pick the best tool for the job, we are not thinking inside of the box, but always discuss this with your superior
 * Always write your code with the latest techniques, and let tools like Babel or PostCSS take care or backwards compatibility
+* For the default folder structures, please see the end of this document
 * All communication on Jira and all documentation (and everything else in Git repos) should be in English
 * For security reasons, try to avoid using FTP, rather use SFTP, or connect through SSH and pull from the Git repo (with a deploy key)
 * When using SSH, if possible, use an SSH-key, and not just a password, this is to improve security
@@ -54,10 +52,13 @@ There are some general rules that should be followed at all times.
 
 * Don't merge your own code into the develop/master branch, always create a pull request and let someone check the code
 * Always work on your own branch, and name the branch to your first name, although if Jira is used for the project, you can name the branch to the issue name in Jira
+* Use a clean folder structure. There is no default folder structure, because this depends on the kind of product. Just to be sure your colleagues can work with your code, discuss your proposal for the project folder structure with your superior
 * Make sure you always add steps in the README.md file for others to make your code run, so include the needed global dependencies, commands to install dependencies, and steps to run everything. Strive to write documentation so that everyone will understand it
+* Git README.md badges are sexy. Add them!
 * For making sure your project will run on the computer of others, please use tools like TravisCI or Jenkins
 * If your project uses a set of dependencies (like Mongo and Node) working together in a complex way, write a Dockerfile or Docker Compose file
 * Always write a clear description for your commit so it is clear what was changed or added, so not just `"styling updates"`, but rather `"improved styling for the menu dropdown"`
+* Before committing/pushing, see if you are committing/committed the right files and you are not uploading confidential files or files that should not be in the Git repository
 * If your commit is to fix a Jira issue, include the issue number in your commit message
 * Try to commit around every hour or two or after important milestones
 
@@ -117,7 +118,7 @@ There are some general rules that should be followed at all times.
 * If you are writing emails, use the MJML preprocessor
 * For production, remove source maps and minify the code
 
-# Preprocessors for CSS
+# CSS preprocessors
 
 * Currently, SCSS is preferred for a project. If you want to use something else, discuss this with your superior.
 * Make use of the functionalities the preprocessor gives you! Don't do stuff yourself that a preprocessor can take care off for you
@@ -181,6 +182,7 @@ The following sources are used for the creation of this Coding Guidelines file, 
 * [Roots.io](https://roots.io/)
 
 #### Starter packs
+* [Mega Boiler Plate](http://megaboilerplate.com/)
 * [HTML-Starter-Kit](https://github.com/AllStarterKits/HTML-Starter-Kit)
 * [NodeJS-Starter-Kit](https://github.com/AllStarterKits/NodeJS-Starter-Kit)
 * [MEAN-Starter-Kit](https://github.com/AllStarterKits/MEAN-Starter-Kit)
