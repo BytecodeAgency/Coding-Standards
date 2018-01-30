@@ -175,6 +175,7 @@ Some final words of this Coding Guidelines file:
 The following sources are used for the creation of this Coding Guidelines file, please also read the following sources (you don't have to go in depth), because of course we couldn't add every single usable detail in this file.
 
 * [Airbnb Javascript standards](https://github.com/airbnb/javascript)
+* [Javascript project guidelines](https://github.com/wearehive/project-guidelines)
 * [Sitepoint SASS project architecture](https://www.sitepoint.com/architecture-sass-project/)
 * [SASS Guidelin.es](https://sass-guidelin.es/), please read [this](https://sass-guidelin.es/#too-long-didnt-read) part for some great tips
 * [Gitignore creator](https://www.gitignore.io/)
