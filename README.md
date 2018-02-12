@@ -37,6 +37,7 @@ These are the general rules we use for writing software.
 * When starting on a project, try to pick the best tool for the job. Be sure to discuss this with your superior, as this can have a lot of impact on a project
 * Use a clean folder structure. There is no default folder structure, because this depends on the kind of product. Just to be sure your colleagues can work with your code, discuss your proposal for the project folder structure with your superior
 * Write your code with the latest techniques, and let tools like Babel or PostCSS take care of backwards compatibility
+* For production, uglify/minify your code and remove source maps
 * All communication on Jira and all documentation (and everything else in Git repos) should be in English
 
 # General Style
@@ -72,7 +73,7 @@ These are the general rules we use for writing software.
 
 * Use external files to include styling and scripts (never use in-line styling).
 * Use `<link rel="stylesheet" href="style.css">` and not `@import` to add styling. For scripts use `<script src="codeguide.js" />`
-* For your own code, you can include just 1 script file and 1 stylesheet, so combine everything using tools like Gulp or Webpack
+* For your own code, you can include just 1 script file and 1 stylesheet, so combine everything using tools like Gulp, Parcel or Webpack
 * Add an `alt` tag to images
 * Write your code with XHTML in mind, so use `<br/>` and not just `<br>`, because there is always a chance your code will later be converted into a React app. *Side Note: using `<br>` in your HTML is not very semantic, use CSS for white space please :angel:*
 * Make us of the HTML5 elements `<article>, <nav>, <aside>, <details>, <header>, <footer>, <section>`, instead of `<div>` where appropriate.
@@ -118,7 +119,7 @@ These are the general rules we use for writing software.
 * Use [BEM](http://getbem.com/naming/) for naming CSS classes
 * Name classes descriptively 
 * For font-sizes, use an exponential scale, preferably based on the Fibonacci number (1.618) [Click here to geek out](https://3.7designs.co/blog/2010/10/how-to-design-using-the-fibonacci-sequence/)
-* For colors, use hex values (not rgb or rgba), as short as possible, and in lowercase, for example: not `#FFFFFF` but `#fff`
+* For colors, use hex values (not rgb or rgba), as short as possible, and in lowercase, for example: not `#FFFFFF` but `#fff`, and not `background-color` but ''
 * A zero (0) should not have unit
 * Try to work with floats as little as possible, rather use flexbox or CSS grids
 * If you are writing emails, use of the MJML preprocessor is encouraged
@@ -184,6 +185,10 @@ The following sources are used for the creation of this Coding Guidelines file, 
 * [Gitignore creator](https://www.gitignore.io/)
 * [WordPress Codex](https://codex.wordpress.org/)
 * [Roots.io](https://roots.io/)
+* [Wikipedia - DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
+* [Fibonacci](https://3.7designs.co/blog/2010/10/how-to-design-using-the-fibonacci-sequence/)
+* [Yarn](https://www.sitepoint.com/yarn-vs-npm/)
+* [BEM](http://getbem.com/naming/)
 
 #### Starter packs
 * [Mega Boiler Plate](http://megaboilerplate.com/)
