@@ -119,7 +119,7 @@ These are the general rules we use for writing software.
 * Use [BEM](http://getbem.com/naming/) for naming CSS classes
 * Name classes descriptively 
 * For font-sizes, use an exponential scale, preferably based on the Fibonacci number (1.618) [Click here to geek out](https://3.7designs.co/blog/2010/10/how-to-design-using-the-fibonacci-sequence/)
-* For colors, use hex values (not rgb or rgba), as short as possible, and in lowercase, for example: not `#FFFFFF` but `#fff`, and not `background-color` but ''
+* For colors, use hex values (not rgb or rgba), as short as possible, and in lowercase, for example: not `#FFFFFF` but `#fff`, and not `background-color: #fff` but `background: #fff`
 * A zero (0) should not have unit
 * Try to work with floats as little as possible, rather use flexbox or CSS grids
 * If you are writing emails, use of the MJML preprocessor is encouraged
