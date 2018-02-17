@@ -54,7 +54,8 @@ These are the general rules we use for writing software.
 
 * For security reasons try to avoid using FTP, rather use SFTP or connect through SSH and pull from the Git repo (with a deploy key)
 * When using SSH, if possible, use an SSH-key and not just a password. This is to improve security
-* Follow our security guidelines, which can be found: [here]()
+* For deployment using Git, or when setting up Git on a remote server, always use deploy keys, and do not reuse these keys
+* When you add any login credentials or keys in a Git repo, even if it's a private repo with limited access, encrypt the files containing the credentials/keys if possible for maximum security
 
 # Git
 
