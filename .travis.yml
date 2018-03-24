@@ -4,11 +4,10 @@ node_js:
   - "stable"
   - "node"
   - "lts/*"
+  - "9"
   - "8"
   - "7"
   - "6"
-  - "5"
-  - "4"
 
 notifications:
   email:
@@ -22,8 +21,8 @@ install:
 
 # before_script:
 
-# script:
-  # - npm test
+script:
+  - yarn run build
 
 cache:
   yarn: true

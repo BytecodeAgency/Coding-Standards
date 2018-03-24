@@ -12,6 +12,8 @@ Thumbs.db
 .env
 .npm
 coverage
+docs/
+.cache/
 
 # Node specific
 node_modules/
