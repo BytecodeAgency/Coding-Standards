@@ -1,13 +1,4 @@
 {
-  "presets": [
-    [
-      "env",
-      {
-        "targets": {
-          "browsers": ["last 2 versions", ">1%"]
-        }
-      }
-    ]
-  ],
-  "sourcemaps": true
+    "presets": ["env"],
+    "plugins": ["transform-decorators"]
 }

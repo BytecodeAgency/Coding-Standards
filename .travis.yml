@@ -8,8 +8,6 @@ node_js:
   - "8"
   - "7"
   - "6"
-  - "5"
-  - "4"
 
 notifications:
   email:
@@ -23,17 +21,10 @@ install:
 
 # before_script:
 
-# script:
-  # - npm test
+script:
+  - yarn run build
 
 cache:
   yarn: true
   directories:
     - node_modules
-
-addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
