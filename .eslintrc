@@ -2,17 +2,13 @@
     "extends": "airbnb",
     "env": {
         "es6": true
-    },
-    "plugins": ["jquery"],
+    }
+    "parser": "babel-eslint",
+    "plugins": [
+        "react",
+        "prettier"
+    ],
     "rules": {
-        "strict": 1,
-        "eol-last": 1,
-        "no-else-return": 1,
-        "max-len": [1, 150, 2],
-        "prefer-arrow-callback": 1,
-        "prefer-template": 2,
-        "indent": [1, 4, { "SwitchCase": 1, "VariableDeclarator": 1 }],
-        "no-loop-func": 0,
-        "no-nested-ternary": 1
+        "prettier/prettier": "error"
     }
 }
