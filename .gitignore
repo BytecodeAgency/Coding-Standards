@@ -15,6 +15,19 @@ coverage
 docs/
 .cache/
 
+# Code editors
+*.swp
+*.swo
+.idea/
+*.ipr
+*.iml
+*.iws
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
 # Node specific
 node_modules/
 logs
