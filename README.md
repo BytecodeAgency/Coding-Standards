@@ -206,4 +206,4 @@ The following sources are used for the creation of this Coding Guidelines file, 
 
 #### Contributors
 * [Luciano Nooijen - Bytecode Digital Agency B.V.](https://bytecode.nl)
-* [Jeroen van Steijn - Nooijen/Van Steijn (Web) Solutions](https://bytecode.nl)
+* [Jeroen van Steijn - Bytecode Digital Agency B.V.](https://bytecode.nl)
