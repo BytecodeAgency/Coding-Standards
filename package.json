@@ -1,10 +1,10 @@
 {
-  "name": "Nooijen Web Solutions Coding Standards",
+  "name": "Bytecode Coding Standards",
   "version": "1.0.0",
   "description": "Example package.json file, in line with our coding standards",
   "main": "app.js",
-  "repository": "git@github.com:NooijenSolutions/Coding-Standards.git",
-  "author": "Nooijen Web Solutions <info@nooijensolutions.nl>",
+  "repository": "git@github.com:BytecodeBV/Coding-Standards.git",
+  "author": "Bytecode Digital Agency B.V. <info@bytecode.nl>",
   "license": "GPL-3.0",
   "private": false,
   "scripts": {

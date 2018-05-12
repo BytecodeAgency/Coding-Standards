@@ -1,11 +1,11 @@
-# Nooijen Web Solutions Coding Standards
+# Bytecode Digital Agency B.V. Coding Standards
 
-[![Developed by](https://img.shields.io/badge/Developed%20by-Nooijen%20Web%20Solutions-green.svg)](https://nooijensolutions.nl) 
+[![Developed by](https://img.shields.io/badge/Developed%20by-Bytecode-green.svg)](https://bytecode.nl) 
 [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/) 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-The coding standards for developers at Nooijen Web Solutions to ensure code health and quality of the products delivered to our clients.
+The coding standards for developers at Bytecode Digital Agency B.V. to ensure code health and quality of the products delivered to our clients.
 
 ## About
 
@@ -67,7 +67,7 @@ These are the general rules we use for writing software.
 * Don't merge your own code into the develop/master branch, always create a pull request and let at least one other developer review the code
 * Work on your own branch and name the branch to your first name. If Jira is used for the project, you can name the branch after the issue name in Jira
 * Make sure you always add steps in the README.md file for others to make your code run: include the needed global dependencies, commands to install dependencies, and steps to run everything.
-* Git README.md badges are sexy. Add them! For examples, check [this](https://github.com/NooijenSolutions/Salesleadership-Academy) Github repo of ours.
+* Git README.md badges are sexy. Add them! For examples, check [this](https://github.com/bytecode/Salesleadership-Academy) Github repo of ours.
 * To make sure your project will run on the computer of others, use tools like TravisCI or Jenkins
 * If your project uses a set of dependencies (like Mongo and Node) working together in a complex way, write a Dockerfile or Docker Compose file
 * Write a clear description for your commit which makes clear what was changed or added, fo example: not `"styling updates"`, but rather `"improved styling for the menu dropdown"`
@@ -205,5 +205,5 @@ The following sources are used for the creation of this Coding Guidelines file, 
 * WordPress framework - coming soon
 
 #### Contributors
-* [Luciano Nooijen - Nooijen Web Solutions](https://nooijensolutions.nl)
-* [Jeroen van Steijn - Nooijen/Van Steijn (Web) Solutions](https://nooijensolutions.nl)
+* [Luciano Nooijen - Bytecode Digital Agency B.V.](https://bytecode.nl)
+* [Jeroen van Steijn - Nooijen/Van Steijn (Web) Solutions](https://bytecode.nl)
