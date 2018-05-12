@@ -67,7 +67,7 @@ These are the general rules we use for writing software.
 * Don't merge your own code into the develop/master branch, always create a pull request and let at least one other developer review the code
 * Work on your own branch and name the branch to your first name. If Jira is used for the project, you can name the branch after the issue name in Jira
 * Make sure you always add steps in the README.md file for others to make your code run: include the needed global dependencies, commands to install dependencies, and steps to run everything.
-* Git README.md badges are sexy. Add them! For examples, check [this](https://github.com/bytecode/Salesleadership-Academy) Github repo of ours.
+* Git README.md badges are sexy. Add them! For examples, check [this](https://github.com/BytecodeBV/Salesleadership-Academy) Github repo of ours.
 * To make sure your project will run on the computer of others, use tools like TravisCI or Jenkins
 * If your project uses a set of dependencies (like Mongo and Node) working together in a complex way, write a Dockerfile or Docker Compose file
 * Write a clear description for your commit which makes clear what was changed or added, fo example: not `"styling updates"`, but rather `"improved styling for the menu dropdown"`
