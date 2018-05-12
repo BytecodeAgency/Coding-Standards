@@ -81,7 +81,7 @@ These are the general rules we use for writing software.
 * Use `<link rel="stylesheet" href="style.css">` and not `@import` to add styling. For scripts use `<script src="codeguide.js" />`
 * For your own code, you can include just 1 script file and 1 stylesheet, so combine everything using tools like Gulp, Parcel or Webpack
 * Add an `alt` tag to images
-* Write your code with XHTML in mind, so use `<br/>` and not just `<br>`, because there is always a chance your code will later be converted into a React app. *Side Note: using `<br>` in your HTML is not very semantic, use CSS for white space please :angel:*
+* Write your code with XHTML in mind, so use `<br/>` and not just `<br>`, because there is always a chance your code will later be converted into a React app. *Side Note: using `<br>` in your HTML is not very semantic, use CSS for white space please* :angel:
 * Make us of the HTML5 elements `<article>, <nav>, <aside>, <details>, <header>, <footer>, <section>`, instead of `<div>` where appropriate.
 * For templating, you can always use Handlebars. If you like to use another templating engine like, like Pug or ejs, discuss this with your superior
 * Use the following order of attributes on HTML-elements:
