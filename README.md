@@ -49,8 +49,8 @@ These are the general rules we use for writing software.
 
 * Don't use "Yoda" conditions, as these make it harder to read your code at a glance
 * Use camelCase and use single quotes (unless the language does not allow this). This is mostly taken care of by our linters
-* Indent using 4 spaces. When using tabs, set your code editor to convert tabs to 4 spaces
-* Lines should be at most 150 characters (spaces included). This is also taken care of by our linters
+* Indent using 4 _spaces_. Set your code editor to convert tabs to 4 spaces.
+* Lines should be at most 80 characters (spaces included). This is also taken care of by our linters
 * For single line comments, use `// comment`, for multi-line comments, use `/** * comment */`
 * Make sure your code is readable. This means using clear names for your functions, adding enough (although not too many) comments and adding enough and a consistent amount of whitespace. The latter is mostly taken care of by our linters.
 * On that subject: use linters, and let the linter check your code before committing on Git. You can also use git-hooks to lint your code as you commit
@@ -81,8 +81,10 @@ These are the general rules we use for writing software.
 * Use `<link rel="stylesheet" href="style.css">` and not `@import` to add styling. For scripts use `<script src="codeguide.js" />`
 * For your own code, you can include just 1 script file and 1 stylesheet, so combine everything using tools like Gulp, Parcel or Webpack
 * Add an `alt` tag to images
+* Use double quotes like `<a href="#">`, not single quotes like `<a href='#'>`
 * Write your code with XHTML in mind, so use `<br/>` and not just `<br>`, because there is always a chance your code will later be converted into a React app. *Side Note: using `<br>` in your HTML is not very semantic, use CSS for white space please* :angel:
 * Make us of the HTML5 elements `<article>, <nav>, <aside>, <details>, <header>, <footer>, <section>`, instead of `<div>` where appropriate.
+* _Only_ leave an empty line between parts of the page, like the navigation, or `<section>` tags
 * For templating, you can always use Handlebars. If you like to use another templating engine like, like Pug or ejs, discuss this with your superior
 * Use the following order of attributes on HTML-elements:
   1. src, for, type, href, value
@@ -116,14 +118,18 @@ These are the general rules we use for writing software.
 # CSS
 
 * Try not to use CSS, rather use SASS/SCSS
-* We strive to use as few CSS frameworks as possible. So only include a CSS framework/library after discussing with your superior
-* If you are using Bootstrap, you can use Bootstrap 4, not Bootstrap 3, only if you have to work with legacy code that already includes Bootstrap 3
+* We strive to use as few CSS frameworks as possible. So only include a CSS framework/library after discussing
+* If you are using Bootstrap _(try not to use the whole framework, just the grid system)_, you can use Bootstrap 4, not Bootstrap 3, only if you have to work with legacy code that already includes Bootstrap 3
 * If you are using another framework that uses px-units, use px, else use rem-values *(rem values scale with the HTML-object's font-size, which makes responsive typography a whole lot easier)*
-* There should only be a maximum of 2 CSS files per page (to decrease HTTP requests)
+* If the used frameworks allow it, write your media queries mobile first, like `@media (min-width: 30rem)`
 * List related items together
 * If a :hover pseudo class is styled, style :focus the same for accessibility
+* Never use IDs, use classes
 * Use [BEM](http://getbem.com/naming/) for naming CSS classes
-* Name classes descriptively 
+* Name classes descriptively
+* Use double quotes, not single quotes
+* Use only one declaration per line, this makes the code more readable
+* Add a space after the colon of a declaration, so not `margin:1rem;` but `margin: 1rem;`
 * For font-sizes, use an exponential scale, preferably based on the Fibonacci number (1.618) [Click here to geek out](https://3.7designs.co/blog/2010/10/how-to-design-using-the-fibonacci-sequence/). There is also a Sass plugin available for modular scales like this. You can find the plugin [here](https://github.com/modularscale/modularscale-sass)
 * For colors, use hex values (not rgb or rgba), as short as possible, and in lowercase, for example: not `#FFFFFF` but `#fff`, and not `background-color: #fff` but `background: #fff`
 * A zero (0) should not have unit
@@ -133,11 +139,13 @@ These are the general rules we use for writing software.
 # CSS preprocessors
 
 * Currently, SCSS is preferred for a project. If you want to use something else, discuss this with your superior.
+* Do not use extends, but use mixins
 * Make use of the functionalities the preprocessor gives you! Don't do stuff yourself that a preprocessor can take care off for you
-* You can compile your code to CSS using toolkits like Webpack or Gulp
+* You can compile your code to CSS using toolkits like Webpack or Gulp, although currently Parcel Bundler is the prefered method
 * Don't go and add prefixes by hand. Instead, let a plugin handle this for you
 * Try to avoid nesting, rather use BEM. Use of nesting is mostly resticted to :hover-states etc.
 * When you do nest, make it at most 3 levels deep
+* Provide the media queries rules inside the element
 * Break files out into small modules (avoid having a file that is larger than 100 lines)
 * Avoid using IDs throughout the site. Use IDs for parent elements. Example: Header, Footer, Main. Using Classes avoids having to use !important
 * For shameful code, use the *_shame.scss file*. We all have to do this sometimes, better own up to it. [More Geeky links](https://csswizardry.com/2013/04/shame-css/)
@@ -149,10 +157,11 @@ These are the general rules we use for writing software.
 * Use Yarn as a package manager: [it's better than NPM](https://www.sitepoint.com/yarn-vs-npm/).
 * The usage of Typescript is encouraged
 * For linting, use ESLint. You're allowed to use modules on top of ESLint like [Prettier](https://prettier.io/)
-* Write your code in ESNext/ES6+, and transpile using Babel to ES5 because Internet Explorer
+* Write your code in ESNext/ES6+, and transpile using Babel to ES5 because Internet Explorer :pensive:
 * Before adding a library, discuss with your superior
 * Don't use anonymous functions (`function test() {}`), write them like this: `const test = () => {}`
 * When using jQuery, write it using `$('selector');` and not using `jQuery('selector');`, except when it gives compatiblity issues.
+* Comment your code following the [ESDoc](https://esdoc.org/) notation, it's understood by (almost) every code editor and IDE
 
 # PHP
 
@@ -168,7 +177,7 @@ These are the general rules we use for writing software.
 This is an extension of the PHP part of this file.
 
 * Write your WordPress code along the rules of the [WordPress Codex](https://codex.wordpress.org/)
-* Write variables using underscores, not camel-case, because WordPress does not allow camel-case, so write variables like `this_is_an_example`
+* Write variables using underscores (snake_case), not camel-case, because WordPress does not allow camel-case, so write variables like `this_is_an_example`
 * Don't change anything in the core files or existing plugins/themes! Use hooks, make a plugin out of it, or add it to the child theme
 * Don't hardcode paths, use functions like `get_stylesheet_directory_uri`
 * Never write MySQL queries yourself, use `$wpdb`
@@ -189,6 +198,7 @@ The following sources are used for the creation of this Coding Guidelines file, 
 * [Javascript project guidelines](https://github.com/wearehive/project-guidelines)
 * [Sitepoint SASS project architecture](https://www.sitepoint.com/architecture-sass-project/)
 * [SASS Guidelin.es](https://sass-guidelin.es/), please read [this](https://sass-guidelin.es/#too-long-didnt-read) part for some great tips
+* [Altavia ACT styleguide](https://github.com/Altavia-ACT/styleguide)
 * [Gitignore creator](https://www.gitignore.io/)
 * [WordPress Codex](https://codex.wordpress.org/)
 * [Roots.io](https://roots.io/)
