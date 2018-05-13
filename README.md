@@ -54,6 +54,7 @@ These are the general rules we use for writing software.
 * For single line comments, use `// comment`, for multi-line comments, use `/** * comment */`
 * Make sure your code is readable. This means using clear names for your functions, adding enough (although not too many) comments and adding enough and a consistent amount of whitespace. The latter is mostly taken care of by our linters.
 * On that subject: use linters, and let the linter check your code before committing on Git. You can also use git-hooks to lint your code as you commit
+* Leave an empty last line in every file
 
 # Security
 
