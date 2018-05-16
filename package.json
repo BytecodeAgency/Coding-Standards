@@ -1,5 +1,5 @@
 {
-  "name": "Bytecode Coding Standards",
+  "name": "bytecode-coding-standards",
   "version": "1.0.0",
   "description": "Example package.json file, in line with our coding standards",
   "main": "app.js",
