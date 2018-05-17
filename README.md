@@ -76,6 +76,7 @@ These are the general rules we use for writing software.
 * Before pushing, see if you are pushing the right files and you are not uploading confidential files or files that should not be in the Git repository
 * If your commit is to fix a Jira issue, include the issue number in your commit message
 * Try to commit at least around every hour or two or after important milestones
+* Use [semantic versioning](https://semver.org/) for production releases
 
 # HTML
 
