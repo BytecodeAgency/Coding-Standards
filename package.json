@@ -1,6 +1,6 @@
 {
   "name": "bytecode-coding-standards",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Example package.json file, in line with our coding standards",
   "main": "app.js",
   "repository": "git@github.com:BytecodeBV/Coding-Standards.git",
