@@ -1,15 +1,13 @@
+@import 'abstracts/abstracts';
 @import 'base/base';
-@import 'layout/layout';
 @import 'components/components';
+@import 'layout/layout';
 @import 'pages/pages';
-@import 'vendor/vendor';
+@import 'themes/themes';
+@import 'vendors/vendors';
 @import 'shame';
 
 body {
-  background-color: #ddd;
+  background-color: #ddd; // Just to test if it's working
 }
 
-.mainfooter {
-  padding: 20px 0;
-  background-color: #eee;
-}

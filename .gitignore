@@ -7,6 +7,14 @@
 ehthumbs.db
 Thumbs.db
 
+# General
+build/
+dist/
+docs/
+.next/
+.cache/
+.env
+
 # Misc
 .idea/
 .env
