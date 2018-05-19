@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{#if language}}{{language}}{{else}}nl{{/if}}" dir="ltr">
+<head>
+{{#block "meta"}}
+{{> meta}}
+{{/block}}
+
+{{#block "title"}}
+<title>{{title}}</title>
+{{/block}}
+</head>
+
+{{#block "body"}}
+  <body class="{{bodyclass}}">
+    {{> header}}
+
+    {{> navigation}}
+
+    {{#block "main"}}
+    {{/block}}
+
+    {{> footer}}
+
+    <script src="ts/main.ts"></script>
+  </body>
+{{/block}}
+</html>
+
