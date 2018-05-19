@@ -3,6 +3,6 @@ rules:
         - 4
         -
             size: 4
-    property-sort-order: 
+    property-sort-order:
         - 1
         - concentric
