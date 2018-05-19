@@ -6,5 +6,5 @@ const app = express();
 app.use(express.static('dist'));
 
 app.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
+    console.log(`Server listening on port ${port}`); // eslint-disable-line
 });
