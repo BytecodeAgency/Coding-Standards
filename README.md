@@ -1,7 +1,7 @@
-#Bytecode Digital Agency B.V. Coding Standards
+# Bytecode Digital Agency B.V. Coding Standards
 
-[![Developed by](https://img.shields.io/badge/Developed%20by-Bytecode-green.svg)](https://bytecode.nl) 
-[![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/) 
+[![Developed by](https://img.shields.io/badge/Developed%20by-Bytecode-green.svg)](https://bytecode.nl)
+[![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
@@ -14,6 +14,8 @@ Please use these standards in every line of code you write. This is not to bully
 This repo also contains files you can use for development. These files are *defaults*, so you can of course edit them to suit the needs of the project.
 
 Please read this file thoroughly, and also check out the links in the [Final words](#final-words) section. Spending half an hour now can save you many hours during projects!
+
+Remark: _This project also includes our Parcel starter_
 
 # Table of Contents
 
@@ -211,6 +213,8 @@ The following sources are used for the creation of this Coding Guidelines file, 
 * [BEM](http://getbem.com/naming/)
 
 #### Starter packs
+
+* This repo for Parcel development
 * [Mega Boiler Plate](http://megaboilerplate.com/)
 * [HTML-Starter-Kit](https://github.com/AllStarterKits/HTML-Starter-Kit)
 * [NodeJS-Starter-Kit](https://github.com/AllStarterKits/NodeJS-Starter-Kit)
@@ -218,5 +222,6 @@ The following sources are used for the creation of this Coding Guidelines file, 
 * WordPress framework - coming soon
 
 #### Contributors
+
 * [Luciano Nooijen - Bytecode Digital Agency B.V.](https://bytecode.nl)
 * [Jeroen van Steijn - Bytecode Digital Agency B.V.](https://bytecode.nl)
