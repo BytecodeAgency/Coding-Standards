@@ -1,4 +1,6 @@
-# Bytecode Digital Agency B.V. Coding Standards [![Developed by](https://img.shields.io/badge/Developed%20by-Bytecode.nl-green.svg)](https://bytecode.nl) [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+# Bytecode Digital Agency B.V. Coding Standards
+
+[![Developed by](https://img.shields.io/badge/Developed%20by-Bytecode.nl-green.svg)](https://bytecode.nl) [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 [![Build Status](https://travis-ci.org/BytecodeBV/Coding-Standards.svg?branch=master)](https://travis-ci.org/BytecodeBV/Coding-Standards)
 [![dependencies Status](https://david-dm.org/BytecodeBV/Coding-Standards/status.svg)](https://david-dm.org/BytecodeBV/Coding-Standards)
