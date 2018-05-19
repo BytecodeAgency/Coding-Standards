@@ -1,13 +1,21 @@
-# Bytecode Digital Agency B.V. Coding Standards
+# Bytecode Digital Agency B.V. Coding Standards [![Developed by](https://img.shields.io/badge/Developed%20by-Bytecode.nl-green.svg)](https://bytecode.nl) [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
-[![Developed by](https://img.shields.io/badge/Developed%20by-Bytecode-green.svg)](https://bytecode.nl)
-[![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/)
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[![Build Status](https://travis-ci.org/BytecodeBV/Coding-Standards.svg?branch=master)](https://travis-ci.org/BytecodeBV/Coding-Standards)
+[![dependencies Status](https://david-dm.org/BytecodeBV/Coding-Standards/status.svg)](https://david-dm.org/BytecodeBV/Coding-Standards)
+[![devDependencies Status](https://david-dm.org/BytecodeBV/Coding-Standards/dev-status.svg)](https://david-dm.org/BytecodeBV/Coding-Standards?type=dev)
+[![Known Vulnerabilities](https://snyk.io/test/github/bytecodebv/coding-standards/badge.svg?targetFile=package.json)](https://snyk.io/test/github/bytecodebv/coding-standards?targetFile=package.json)
+
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![CodeFactor](https://www.codefactor.io/repository/github/bytecodebv/coding-standards/badge)](https://www.codefactor.io/repository/github/bytecodebv/coding-standards)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7ec94c3910f7440a9552b686741b3499)](https://www.codacy.com/app/lucianonooijen/Coding-Standards?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BytecodeBV/Coding-Standards&amp;utm_campaign=Badge_Grade)
+[![BCH compliance](https://bettercodehub.com/edge/badge/BytecodeBV/Coding-Standards?branch=master)](https://bettercodehub.com/)
+[![bitHound Overall Score](https://www.bithound.io/github/BytecodeBV/Coding-Standards/badges/score.svg)](https://www.bithound.io/github/BytecodeBV/Coding-Standards)
+[![bitHound Code](https://www.bithound.io/github/BytecodeBV/Coding-Standards/badges/code.svg)](https://www.bithound.io/github/BytecodeBV/Coding-Standards)
 
-The coding standards for developers at Bytecode Digital Agency B.V. to ensure code health and quality of the products delivered to our clients.
 
 ## About
+
+The coding standards for developers at Bytecode Digital Agency B.V. to ensure code health and quality of the products delivered to our clients.
 
 Please use these standards in every line of code you write. This is not to bully you but to make sure everyone in our company writes code the same way, and this is the only way to assure quality of our code.
 
@@ -71,8 +79,8 @@ These are the general rules we use for writing software.
 * Don't merge your own code into the develop/master branch, always create a pull request and let at least one other developer review the code
 * Work on your own branch and name the branch to your first name. If Jira is used for the project, you can name the branch after the issue name in Jira
 * Make sure you always add steps in the README.md file for others to make your code run: include the needed global dependencies, commands to install dependencies, and steps to run everything.
-* Git README.md badges are sexy. Add them! For examples, check [this](https://github.com/BytecodeBV/Salesleadership-Academy) Github repo of ours.
-* To make sure your project will run on the computer of others, use tools like TravisCI or Jenkins
+* Git README.md badges are sexy. Add them! For examples, check the top of this repo
+* To make sure your project will run on the computer of others, use tools like TravisCI, CircleCI or Jenkins
 * If your project uses a set of dependencies (like Mongo and Node) working together in a complex way, write a Dockerfile or Docker Compose file
 * Write a clear description for your commit which makes clear what was changed or added, fo example: not `"styling updates"`, but rather `"improved styling for the menu dropdown"`
 * Before pushing, see if you are pushing the right files and you are not uploading confidential files or files that should not be in the Git repository
