@@ -1,7 +1,7 @@
 # Bytecode Digital Agency B.V. Coding Standards
 
 [![Developed by](https://img.shields.io/badge/Developed%20by-Bytecode.nl-green.svg)](https://bytecode.nl) 
-[![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/) 
+[![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FBytecodeBV%2FCoding-Standards.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FBytecodeBV%2FCoding-Standards?ref=badge_shield)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
