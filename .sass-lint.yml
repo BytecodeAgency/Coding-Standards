@@ -5,4 +5,5 @@ rules:
             size: 4
     property-sort-order:
         - 1
-        - concentric
+        -
+            order: smacss
