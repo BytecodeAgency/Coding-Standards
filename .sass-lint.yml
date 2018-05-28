@@ -7,3 +7,6 @@ rules:
         - 1
         -
             order: smacss
+    class-name-format:
+        - allow-leading-underscore: false
+        - convention: hyphenatedbem
