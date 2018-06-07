@@ -54,6 +54,7 @@ These are the general rules we use for writing software.
 * Structure your work in a way that other developers can easily understand it. This means having the possibility of co-workers modifying your code in the back of your mind
 * Document your code for end users, and when writing small and general functions
 * [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself): Don't repeat yourself! Don't build long functions that do a specific thing, but try to create smaller and more general functions
+* Write [SOLID](https://en.wikipedia.org/wiki/SOLID) code
 * When writing a part of a project that is essential to other systems, write unit tests to make sure these systems can depend on your code
 * When starting on a project, try to pick the best tool for the job. Be sure to discuss this with your superior, as this can have a lot of impact on a project
 * Use a clean folder structure. There is no default folder structure, because this depends on the kind of product. Just to be sure your colleagues can work with your code, discuss your proposal for the project folder structure with your superior
