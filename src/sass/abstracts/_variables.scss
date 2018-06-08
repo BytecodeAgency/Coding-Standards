@@ -1,0 +1,36 @@
+// CSS debug
+$debug: false;
+
+// Colors
+$black: #000;
+
+// Typography
+$heading-font: 'sans-serif';
+$paragraph-font: 'sans-serif';
+$font-awesome-font-family: 'Font Awesome 5 Free';
+
+// Assign colors
+$primary: $black;
+$secondary: $black;
+$tertiary: $black;
+$link-color: $black;
+$border-color: $black;
+
+// Grid settings
+$grid-columns-amount: 12;
+$grid-gutter-width: 3rem;
+$grid-row-gap-height: 2rem;
+
+// Responsive breakpoints, based on minimum value
+$breakpoint-xs: 0;
+$breakpoint-sm: 50rem;
+$breakpoint-md: 80rem;
+$breakpoint-lg: 100rem;
+$breakpoint-xl: 120rem;
+
+// Responsive container max-widths
+$container-max-width-xs: 100%;
+$container-max-width-sm: 50rem;
+$container-max-width-md: 75rem;
+$container-max-width-lg: 95rem;
+$container-max-width-xl: 115rem;

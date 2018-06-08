@@ -1,12 +1,12 @@
 @mixin button {
     margin-right: 1rem;
-    padding: .5rem 3.4rem;
+    padding: .5rem 2rem;
     border: 0;
-    border-radius: 10rem;
+    border-radius: 1rem;
     outline: 0;
     color: $primary;
     font-family: $paragraph-font;
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-size: 1em;
+    font-weight: bold;
     line-height: 1.4em;
 }
