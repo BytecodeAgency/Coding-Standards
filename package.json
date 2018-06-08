@@ -12,7 +12,9 @@
     "dev": "parcel src/index.hbs --no-cache",
     "build": "parcel build src/index.hbs --no-cache",
     "build:ts": "parcel build src/ts/main.ts --no-cache --public-url ./",
-    "esdoc": "./node_modules/.bin/esdoc && open ./docs/index.html"
+    "esdoc": "./node_modules/.bin/esdoc && open ./docs/index.html",
+    "lint:sass": "sass-lint -v",
+    "reinstall": "rm -rf node_modules && yarn"
   },
   "dependencies": {
     "express": "^4.16.3",

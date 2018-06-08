@@ -87,7 +87,7 @@ video {
     vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
+// HTML5 display-role reset for older browsers
 article,
 aside,
 details,
@@ -113,6 +113,7 @@ ul {
 
 blockquote {
     quotes: none;
+
     &::before,
     &::after {
         content: '';
@@ -121,6 +122,7 @@ blockquote {
 
 q {
     quotes: none;
+
     &::before,
     &::after {
         content: '';
@@ -134,7 +136,7 @@ table {
 
 html {
     box-sizing: border-box;
-    -ms-overflow-style: scrollbar;
+    -ms-overflow-style: scrollbar; // sass-lint:disable-line no-vendor-prefixes
 }
 
 *,

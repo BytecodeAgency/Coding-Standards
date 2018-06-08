@@ -1,3 +1,7 @@
+files:
+  include:
+    - 'src/**/*.scss'
+
 rules:
     indentation:
         - 4

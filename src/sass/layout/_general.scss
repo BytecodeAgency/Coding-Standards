@@ -1,0 +1,18 @@
+// sass-lint:disable no-important
+
+@for $i from 1 through 10 {
+    $width: percentage(1 / $i);
+
+    .mt-#{$i} {
+        margin-top: #{$i / 2.5}rem !important;
+    }
+
+    .mb-#{$i} {
+        margin-bottom: #{$i / 2.5}rem !important;
+    }
+
+    .mtb-#{$i} {
+        margin-top: #{$i / 2.5}rem !important;
+        margin-bottom: #{$i / 2.5}rem !important;
+    }
+}

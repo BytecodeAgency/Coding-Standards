@@ -1,0 +1,31 @@
+// sass-lint:disable force-pseudo-nesting
+
+// Create rows
+.row {
+    @include row;
+    margin: 3rem 0;
+
+    &.no-row-gap {
+        @include row($grid-row-gap-height: 0);
+    }
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    [class^='col']:not(.no-center) {
+        display: grid;
+    }
+}
+
+@include generate-columns;
+
+@include generate-containers;
+
+.main {
+    position: relative;
+}
