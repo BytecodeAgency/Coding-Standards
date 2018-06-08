@@ -7,11 +7,9 @@
     @if $type == 'both' {
         align-items: center;
         justify-content: center;
-    }
-    @else if $type == 'vertical' {
+    } @else if $type == 'vertical' {
         align-items: center;
-    }
-    @else if $type == 'horizontal' {
+    } @else if $type == 'horizontal' {
         justify-content: center;
     }
 }
