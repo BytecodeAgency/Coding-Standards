@@ -66,7 +66,7 @@ These are the general rules we use for writing software.
 
 * Don't use "Yoda" conditions, as these make it harder to read your code at a glance
 * Use camelCase and use single quotes (unless the language does not allow this). This is mostly taken care of by our linters
-* Indent using 4 _spaces_. Set your code editor to convert tabs to 4 spaces.
+* Indent using 4 _spaces_. This implies that tab characters should not be used for indentation. Set your code editor to convert tabs to 4 spaces.
 * Opening curly braces should be placed on the same line as the method declaration, like `function test() {`, not on a separate line 
 * Lines should be at most 80 characters (spaces included). This is also taken care of by our linters
 * For single line comments, use `// comment`, for multi-line comments, use `/** * comment */`
