@@ -60,7 +60,7 @@ These are the general rules we use for writing software.
 * Use a clean folder structure. There is no default folder structure, because this depends on the kind of product. Just to be sure your colleagues can work with your code, discuss your proposal for the project folder structure with your superior
 * Write your code with the latest techniques, and let tools like Babel or PostCSS take care of backwards compatibility
 * For production, uglify/minify your code and remove source maps
-* All communication on Jira and all documentation (and everything else in Git repos) should be in English
+* All communication on GitLab and all documentation (and everything else in Git repos) should be in English
 
 # General Style
 
@@ -85,14 +85,14 @@ These are the general rules we use for writing software.
 # Git
 
 * Don't merge your own code into the develop/master branch, always create a pull request and let at least one other developer review the code
-* Work on your own branch and name the branch to your first name. If Jira is used for the project, you can name the branch after the issue name in Jira
+* Work on your own branch and name the branch to your first name. If a GitLab Board is used for the project, you can name the branch after the issue name in a GitLab Board
 * Make sure you always add steps in the README.md file for others to make your code run: include the needed global dependencies, commands to install dependencies, and steps to run everything.
 * Git README.md badges are sexy. Add them! For examples, check the top of this repo
 * To make sure your project will run on the computer of others, use tools like TravisCI, CircleCI or Jenkins
 * If your project uses a set of dependencies (like Mongo and Node) working together in a complex way, write a Dockerfile or Docker Compose file
 * Write a clear description for your commit which makes clear what was changed or added, fo example: not `"styling updates"`, but rather `"improved styling for the menu dropdown"`
 * Before pushing, see if you are pushing the right files and you are not uploading confidential files or files that should not be in the Git repository
-* If your commit is to fix a Jira issue, include the issue number in your commit message
+* If your commit is to fix a Gitlab issue, include the issue number in your commit message, so your commit/branch will be linked to the correct issue
 * Try to commit at least around every hour or two or after important milestones
 * Use [semantic versioning](https://semver.org/) for production releases
 
