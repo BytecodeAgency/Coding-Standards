@@ -2,22 +2,12 @@
 
 [![Developed by](https://img.shields.io/badge/Developed%20by-Bytecode.nl-green.svg)](https://bytecode.nl) 
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FBytecodeBV%2FCoding-Standards.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FBytecodeBV%2FCoding-Standards?ref=badge_shield)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 
-[![Build Status](https://travis-ci.org/BytecodeBV/Coding-Standards.svg?branch=master)](https://travis-ci.org/BytecodeBV/Coding-Standards)
-[![dependencies Status](https://david-dm.org/BytecodeBV/Coding-Standards/status.svg)](https://david-dm.org/BytecodeBV/Coding-Standards)
-[![devDependencies Status](https://david-dm.org/BytecodeBV/Coding-Standards/dev-status.svg)](https://david-dm.org/BytecodeBV/Coding-Standards?type=dev)
-[![Known Vulnerabilities](https://snyk.io/test/github/bytecodebv/coding-standards/badge.svg?targetFile=package.json)](https://snyk.io/test/github/bytecodebv/coding-standards?targetFile=package.json)
-[![bitHound Overall Score](https://www.bithound.io/github/BytecodeBV/Coding-Standards/badges/score.svg)](https://www.bithound.io/github/BytecodeBV/Coding-Standards)
-
+[![FOSSA Status](https://app.fossa.io/api/projects/custom%2B4543%2Fgit%40git.bytedev.io%3Abytecode%2Fcoding-standards.git.svg?type=shield)](https://app.fossa.io/projects/custom%2B4543%2Fgit%40git.bytedev.io%3Abytecode%2Fcoding-standards.git?ref=badge_shield)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![CodeFactor](https://www.codefactor.io/repository/github/bytecodebv/coding-standards/badge)](https://www.codefactor.io/repository/github/bytecodebv/coding-standards)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7ec94c3910f7440a9552b686741b3499)](https://www.codacy.com/app/lucianonooijen/Coding-Standards?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BytecodeBV/Coding-Standards&amp;utm_campaign=Badge_Grade)
-[![BCH compliance](https://bettercodehub.com/edge/badge/BytecodeBV/Coding-Standards?branch=master)](https://bettercodehub.com/)
-[![bitHound Code](https://www.bithound.io/github/BytecodeBV/Coding-Standards/badges/code.svg)](https://www.bithound.io/github/BytecodeBV/Coding-Standards)
-[![Maintainability](https://api.codeclimate.com/v1/badges/341030401d2b34a42344/maintainability)](https://codeclimate.com/github/BytecodeBV/Coding-Standards/maintainability)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/59b7a5078ae345fd9c5fb4f4e27d59aa)](https://www.codacy.com/app/lucianonooijen/coding-standards_2?utm_source=git.bytedev.io&amp;utm_medium=referral&amp;utm_content=bytecode/coding-standards&amp;utm_campaign=Badge_Grade)
 
 ## About
 
