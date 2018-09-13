@@ -165,8 +165,8 @@ These are the general rules we use for writing software.
 # Javascript
 
 * If possible, use vanilla Javascript. Don't add jQuery just for a simple DOM manipulation or a simple API call
-* Use Yarn as a package manager: [it's better than NPM](https://www.sitepoint.com/yarn-vs-npm/).
-* The usage of Typescript is encouraged
+* Use Yarn as a package manager: [it's better than NPM](https://www.sitepoint.com/yarn-vs-npm/)
+* The usage of Typescript is encouraged to ensure type safety
 * For linting, use ESLint. You're allowed to use modules on top of ESLint like [Prettier](https://prettier.io/)
 * Write your code in ESNext/ES6+, and transpile using Babel to ES5 because Internet Explorer :pensive:
 * Before adding a library, discuss with your superior
@@ -196,6 +196,15 @@ This is an extension of the PHP part of this file.
 * For your custom styles and scripts, use Webpack or Gulp
 * Use separate development, staging and production environments
 * If possible, use the tools from [Roots.io](https://roots.io/)
+
+# Python
+
+* For Python code, the [PEP 8 Style Guide](https://www.python.org/dev/peps/pep-0008/) should be followed
+* For Docstring Conventions, check [PEP 257 Docstring Conventions](https://www.python.org/dev/peps/pep-0257/)
+* Always write your code in Python 3, if possible
+* To ensure your code will not just run on your computer, make use of 'virtualenv', to standardize, [Tox](https://tox.readthedocs.io/en/latest/) is a great tool, or you can use Docker of course
+* Make sure there is always a `requirements.txt` file available, so dependencies are the same on different environments
+* Where possible, use type checking
 
 # Final words
 
