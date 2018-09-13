@@ -57,13 +57,14 @@ These are the general rules we use for writing software.
 * Don't use "Yoda" conditions, as these make it harder to read your code at a glance
 * Use camelCase and use single quotes (unless the language does not allow this). This is mostly taken care of by our linters
 * Indent using *4 _spaces_*. This implies that tab characters should not be used for indentation. Set your code editor to convert tabs to 4 spaces.
-* Opening curly braces should be placed on the same line as the method declaration, like `function test() {`, not on a separate line 
+* Opening curly braces should be placed on the same line as the method declaration, like `function test() {`, not on a separate line
 * Lines should be at most 80 characters (spaces included). This is also taken care of by our linters
 * For single line comments, use `// comment`, for multi-line comments, use `/** * comment */`
 * Make sure your code is readable. This means using clear names for your functions, adding enough (although not too many) comments and adding enough and a consistent amount of whitespace. The latter is mostly taken care of by our linters.
 * On that subject: use linters, and let the linter check your code before committing on Git. You can also use git-hooks to lint your code as you commit
 * Leave an empty last line in every file
 * If the project allows it, unit and integration tests are highly appreciated
+* If possible, behaviour-driven development and test-driven development approaches are encouraged
 
 # Security
 
@@ -71,9 +72,11 @@ These are the general rules we use for writing software.
 * When using SSH, if possible, use an SSH-key and not just a password. This is to improve security
 * For deployment using Git, or when setting up Git on a remote server, always use deploy keys, and do not reuse these keys
 * When you add any login credentials or keys in a Git repo, even if it's a private repo with limited access, encrypt the files containing the credentials/keys if possible for maximum security
+* Make use of (gitignored) `.env` files to keep environment variables secret, and easy to setup between environments
 
 # Git
 
+* GitLab should be used as main Git server, if needed GitHub can be setup as repository mirror
 * Don't merge your own code into the develop/master branch, always create a pull request and let at least one other developer review the code
 * Work on your own branch and name the branch to your first name. If a GitLab Board is used for the project, you can name the branch after the issue name in a GitLab Board
 * Make sure you always add steps in the README.md file for others to make your code run: include the needed global dependencies, commands to install dependencies, and steps to run everything.
@@ -82,9 +85,21 @@ These are the general rules we use for writing software.
 * If your project uses a set of dependencies (like Mongo and Node) working together in a complex way, write a Dockerfile or Docker Compose file
 * Write a clear description for your commit which makes clear what was changed or added, fo example: not `"styling updates"`, but rather `"improved styling for the menu dropdown"`
 * Before pushing, see if you are pushing the right files and you are not uploading confidential files or files that should not be in the Git repository
-* If your commit is to fix a Gitlab issue, include the issue number in your commit message, so your commit/branch will be linked to the correct issue
+* If your commit is to fix a GitLab issue, include the issue number in your commit message, so your commit/branch will be linked to the correct issue
 * Try to commit at least around every hour or two or after important milestones
 * Use [semantic versioning](https://semver.org/) for production releases
+
+# Docker
+
+* To ensure compatibility between local, development, staging, test and production environments, the use of Docker is encouraged
+* Docker Compose should be used when there are multiple services running, like PHP and MySQL
+* Using Docker Compose for just one container is still encourtaged
+* Always prefer 2 smaller containers over 1 larger one
+* For running services in production, Docker Compose is prefered over systemd, init.d, etc.
+* If Nginx is used (as a reverse proxy), Nginx should be run through Docker Compose
+* Usage of Linux Alpine is prefered, because it is a very light distro and will speed things up a lot
+* The `docker-compose.yml` file should be the same between environments, so no `-prod.yml`, `-dev.yml` files
+* GitLab can be used as container repository
 
 # HTML
 
@@ -149,7 +164,7 @@ These are the general rules we use for writing software.
 
 # CSS preprocessors
 
-* Currently, SCSS is preferred for a project. If you want to use something else, discuss this with your superior.
+* Currently, SCSS is preferred for a project. If you want to use something else, discuss this with your superior
 * Do not use extends, but use mixins
 * Make use of the functionalities the preprocessor gives you! Don't do stuff yourself that a preprocessor can take care off for you
 * You can compile your code to CSS using toolkits like Webpack or Gulp, although currently Parcel Bundler is the prefered method
@@ -167,16 +182,16 @@ These are the general rules we use for writing software.
 * If possible, use vanilla Javascript. Don't add jQuery just for a simple DOM manipulation or a simple API call
 * Use Yarn as a package manager: [it's better than NPM](https://www.sitepoint.com/yarn-vs-npm/)
 * The usage of Typescript is encouraged to ensure type safety
-* For linting, use ESLint. You're allowed to use modules on top of ESLint like [Prettier](https://prettier.io/)
+* For linting, use ESLint (eslintrc is included in this repository). You're encouraged to use modules on top of ESLint like [Prettier](https://prettier.io/)
 * Write your code in ESNext/ES6+, and transpile using Babel to ES5 because Internet Explorer :pensive:
 * Before adding a library, discuss with your superior
 * Don't use anonymous functions (`function test() {}`), write them like this: `const test = () => {}`
-* When using jQuery, write it using `$('selector');` and not using `jQuery('selector');`, except when it gives compatiblity issues.
+* When using jQuery, write it using `$('selector');` and not using `jQuery('selector');`, except when it gives compatiblity issues
 * Comment your code following the [ESDoc](https://esdoc.org/) notation, it's understood by (almost) every code editor and IDE
 
 # PHP
 
-* For server side stuff we prefer using NodeJS over PHP, so only use PHP when necessary
+* For server side stuff we prefer using NodeJS/Python over PHP, so only use PHP when necessary
 * Use a clean folder structure and use include to add other files. Make sure files don't get longer than 200 lines
 * For reasonably sized projects, use the MVC structure
 * If you are storing user data, especially passwords, you **must** use a framework like Laravel, because you really *really* shouldn't mess with storing that stuff yourself
@@ -185,7 +200,7 @@ These are the general rules we use for writing software.
 
 # WordPress
 
-This is an extension of the PHP part of this file.
+This is an extension of the PHP part of this file
 
 * Write your WordPress code along the rules of the [WordPress Codex](https://codex.wordpress.org/)
 * Write variables using underscores (snake_case), not camel-case, because WordPress does not allow camel-case, so write variables like `this_is_an_example`
@@ -229,12 +244,8 @@ The following sources are used for the creation of this Coding Guidelines file, 
 
 #### Starter packs
 
-* This repo for Parcel development
+* This repo for Parcel/Handlebars development
 * [Mega Boiler Plate](http://megaboilerplate.com/)
-* [HTML-Starter-Kit](https://github.com/AllStarterKits/HTML-Starter-Kit)
-* [NodeJS-Starter-Kit](https://github.com/AllStarterKits/NodeJS-Starter-Kit)
-* [MEAN-Starter-Kit](https://github.com/AllStarterKits/MEAN-Starter-Kit)
-* WordPress framework - coming soon
 
 #### Contributors
 
