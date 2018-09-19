@@ -22,16 +22,16 @@
   },
   "devDependencies": {
     "animate.css": "^3.6.1",
-    "autoprefixer": "^8.5.0",
+    "autoprefixer": "^9.1.5",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
-    "babel-eslint": "^8.2.3",
+    "babel-eslint": "^9.0.0",
     "babel-plugin-transform-decorators": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "esdoc": "^1.1.0",
     "esdoc-standard-plugin": "^1.0.0",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^16.1.0",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jquery": "^1.3.1",
     "eslint-plugin-jsx-a11y": "^6.0.3",
@@ -44,7 +44,7 @@
     "parcel-bundler": "^1.8.1",
     "parcel-plugin-handlebars": "^0.4.4",
     "path": "^0.12.7",
-    "postcss": "^6.0.22",
+    "postcss": "^7.0.2",
     "postcss-modules": "^1.1.0",
     "prettier": "^1.12.1",
     "prettier-tslint": "^0.4.0",
@@ -52,6 +52,6 @@
     "tslint-config-airbnb": "^5.8.0",
     "tslint-eslint-rules": "^5.3.1",
     "tslint-react": "^3.6.0",
-    "typescript": "^2.8.3"
+    "typescript": "^3.0.3"
   }
 }
