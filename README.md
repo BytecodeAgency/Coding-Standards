@@ -7,7 +7,7 @@
 
 [![FOSSA Status](https://app.fossa.io/api/projects/custom%2B4543%2Fgit%40git.bytedev.io%3Abytecode%2Fcoding-standards.git.svg?type=shield)](https://app.fossa.io/projects/custom%2B4543%2Fgit%40git.bytedev.io%3Abytecode%2Fcoding-standards.git?ref=badge_shield)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/59b7a5078ae345fd9c5fb4f4e27d59aa)](https://www.codacy.com/app/lucianonooijen/coding-standards_2?utm_source=git.bytedev.io&amp;utm_medium=referral&amp;utm_content=bytecode/coding-standards&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/59b7a5078ae345fd9c5fb4f4e27d59aa)](https://www.codacy.com/app/lucianonooijen/coding-standards_2?utm_source=git.bytedev.io&amp;utm_medium=referral&amp;utm_content=bytecode/coding-standards&amp;utm_campaign=Badge_Grade) [![Greenkeeper badge](https://badges.greenkeeper.io/BytecodeBV/Coding-Standards.svg)](https://greenkeeper.io/)
 
 ## About
 
