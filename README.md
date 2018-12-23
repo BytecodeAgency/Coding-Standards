@@ -1,6 +1,6 @@
 # Bytecode Digital Agency B.V. Coding Standards
 
-[![Developed by](https://img.shields.io/badge/Developed%20by-Bytecode.nl-green.svg)](https://bytecode.nl) 
+[![Developed by](https://img.shields.io/badge/Developed%20by-Bytecode.nl-green.svg)](https://bytecode.nl)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
@@ -58,9 +58,10 @@ These are the general rules we use for writing software.
 * Use camelCase and use single quotes (unless the language does not allow this). This is mostly taken care of by our linters
 * Indent using *4 _spaces_*. This implies that tab characters should not be used for indentation. Set your code editor to convert tabs to 4 spaces.
 * Opening curly braces should be placed on the same line as the method declaration, like `function test() {`, not on a separate line
-* Lines should be at most 80 characters (spaces included). This is also taken care of by our linters
+* Try to keep your lines at max 80 character width, with a hard limit of 100 characters (indentation included). This is also taken care of by our linters
+* Avoid trailing whitespaces
 * For single line comments, use `// comment`, for multi-line comments, use `/** * comment */`
-* Make sure your code is readable. This means using clear names for your functions, adding enough (although not too many) comments and adding enough and a consistent amount of whitespace. The latter is mostly taken care of by our linters.
+* Make sure your code is readable. This means using clear names for your functions, adding enough (although not too many) comments and adding enough and a consistent amount of whitespace. The latter is mostly taken care of by our linters
 * On that subject: use linters, and let the linter check your code before committing on Git. You can also use git-hooks to lint your code as you commit
 * Leave an empty last line in every file
 * If the project allows it, unit and integration tests are highly appreciated
@@ -73,18 +74,20 @@ These are the general rules we use for writing software.
 * For deployment using Git, or when setting up Git on a remote server, always use deploy keys, and do not reuse these keys
 * When you add any login credentials or keys in a Git repo, even if it's a private repo with limited access, encrypt the files containing the credentials/keys if possible for maximum security
 * Make use of (gitignored) `.env` files to keep environment variables secret, and easy to setup between environments
+* Our complete security policy can be found on
+  [security.bytecode.nl](https://security.bytecode.nl)
 
 # Git
 
-* GitLab should be used as main Git server, if needed GitHub can be setup as repository mirror
+* GitLab should be used as main Git server, if needed GitHub can be setup as repository mirror, unless the project will be created as a free open source software project, then GitHub (@BytecodeOpenSource) must be used as the main Git server.
 * Don't merge your own code into the develop/master branch, always create a pull request and let at least one other developer review the code
 * Work on your own branch and name the branch to your first name. If a GitLab Board is used for the project, you can name the branch after the issue name in a GitLab Board
 * Make sure you always add steps in the README.md file for others to make your code run: include the needed global dependencies, commands to install dependencies, and steps to run everything.
 * Git README.md badges are sexy. Add them! For examples, check the top of this repo
-* To make sure your project will run on the computer of others, use tools like TravisCI, CircleCI or Jenkins
-* If your project uses a set of dependencies (like Mongo and Node) working together in a complex way, write a Dockerfile or Docker Compose file
+* To make sure your project will run on the computer of others, use tools like TravisCI or GitLab CI for automated testing
+* If your project uses a set of dependencies (like Mongo and Node) working together in a complex way, write a Docker Compose file
 * Write a clear description for your commit which makes clear what was changed or added, fo example: not `"styling updates"`, but rather `"improved styling for the menu dropdown"`
-* Before pushing, see if you are pushing the right files and you are not uploading confidential files or files that should not be in the Git repository
+* Before pushing, see if you are pushing the right files and you are not uploading confidential files or files that should not be in the Git repository. Files that should not be in Git repos include .env files, any credentials (even if they may seem harmless to share), personal data, etc.
 * If your commit is to fix a GitLab issue, include the issue number in your commit message, so your commit/branch will be linked to the correct issue
 * Try to commit at least around every hour or two or after important milestones
 * Use [semantic versioning](https://semver.org/) for production releases
@@ -95,9 +98,9 @@ These are the general rules we use for writing software.
 * Docker Compose should be used when there are multiple services running, like PHP and MySQL
 * Using Docker Compose for just one container is still encourtaged
 * Always prefer 2 smaller containers over 1 larger one
-* For running services in production, Docker Compose is prefered over systemd, init.d, etc.
-* If Nginx is used (as a reverse proxy), Nginx should be run through Docker Compose
+* For running services in production, Docker Compose is prefered over systemd, init.d, etc. as it makes deployments much easier
 * Usage of Linux Alpine is prefered, because it is a very light distro and will speed things up a lot
+* Try not to create complete Dockerfile install scripts, rather use existing (and verified safe!) Docker images from the Docker Hub
 * The `docker-compose.yml` file should be the same between environments, so no `-prod.yml`, `-dev.yml` files
 * GitLab can be used as container repository
 
@@ -150,7 +153,7 @@ These are the general rules we use for writing software.
 * If the used frameworks allow it, write your media queries mobile first, like `@media (min-width: 30rem)`
 * List related items together
 * If a :hover pseudo class is styled, style :focus the same for accessibility
-* Never use IDs, use classes
+* Try to never use IDs, use classes
 * Use [BEM](http://getbem.com/naming/) for naming CSS classes
 * Name classes descriptively
 * Use double quotes, not single quotes
@@ -185,6 +188,7 @@ These are the general rules we use for writing software.
 * For linting, use ESLint (eslintrc is included in this repository). You're encouraged to use modules on top of ESLint like [Prettier](https://prettier.io/)
 * Write your code in ESNext/ES6+, and transpile using Babel to ES5 because Internet Explorer :pensive:
 * Before adding a library, discuss with your superior
+* Put semi-colons on the end of your lines, like you would in C-style languages
 * Don't use anonymous functions (`function test() {}`), write them like this: `const test = () => {}`
 * When using jQuery, write it using `$('selector');` and not using `jQuery('selector');`, except when it gives compatiblity issues
 * Comment your code following the [ESDoc](https://esdoc.org/) notation, it's understood by (almost) every code editor and IDE
@@ -221,6 +225,45 @@ This is an extension of the PHP part of this file
 * To ensure your code will not just run on your computer, make use of 'pipenv', to standardize, [Tox](https://tox.readthedocs.io/en/latest/) is a great tool, or you can use Docker of course
 * Make sure there is always a `requirements.txt` file available, so dependencies are the same on different environments
 * Where possible, use type checking
+
+# Elixir
+
+*These guidelines are based on [The Elixir Style Guide](https://github.com/christopheradams/elixir_style_guide) and [Elixir Style Guide](https://github.com/lexmag/elixir-style-guide)*
+
+* Make use of the Elixir v1.6 code formatter, that will take care of most of the syntactical stuff
+* Instead of the usual 4 space indentation, use 2 space indentation
+* Use snake_case for filenames for CamelCase module names
+* Use snake_case for atoms, functions and variables
+* Use parentheses when a `def` has arguments, and omit them when it doesn't
+* Don't put a blank line after `defmodule`
+* List module attributes and directives in the following order:
+    1. @moduledoc
+    2. @behaviour
+    3. use
+    4. import
+    5. alias
+    6. require
+    7. defstruct
+    8. @type
+    9. @module_attribute
+    10. @callback
+    11. @macrocallback
+    12. @optional_callbacks
+* Make exception names end with a trailing `Error`
+* Always include `@type` and `@spec` declarations
+* Always use Dialyzer/Dialyxir to analyze your code
+* Use Logger, rather than `IO.puts`
+* Avoid using the pipe operator just once
+* Parentheses are a must for local or imported zero-arity function calls
+* Add underscores to decimal literals that have six or more digits
+* Represent each level of nesting within a module name as a directory, example:
+
+```elixir
+# file is called parser/core/xml_parser.ex
+
+defmodule Parser.Core.XMLParser do
+end
+```
 
 # Final words
 
