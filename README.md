@@ -17,6 +17,8 @@ Please use these standards in every line of code you write. This is not to bully
 
 This repo also contains files you can use for development. These files are *defaults*, so you can of course edit them to suit the needs of the project.
 
+All of our conventions regarding indentation and such can also be found in the form of an `.editorconfig` file.
+
 Please read this file thoroughly, and also check out the links in the [Final words](#final-words) section. Spending half an hour now can save you many hours during projects!
 
 Remark: _This project also includes our Parcel starter_
@@ -35,6 +37,8 @@ We will discuss the following points in this Coding Standards file:
 * [Javascript](#javascript)
 * [PHP](#php)
 * [WordPress](#wordpress)
+* [Python](#python)
+* [Elixir](#elixir)
 
 # General
 
@@ -63,7 +67,7 @@ These are the general rules we use for writing software.
 * For single line comments, use `// comment`, for multi-line comments, use `/** * comment */`
 * Make sure your code is readable. This means using clear names for your functions, adding enough (although not too many) comments and adding enough and a consistent amount of whitespace. The latter is mostly taken care of by our linters
 * On that subject: use linters, and let the linter check your code before committing on Git. You can also use git-hooks to lint your code as you commit
-* Leave an empty last line in every file
+* Leave an empty last line in every file (a `\n` character)
 * If the project allows it, unit and integration tests are highly appreciated
 * If possible, behaviour-driven development and test-driven development approaches are encouraged
 
@@ -182,6 +186,8 @@ These are the general rules we use for writing software.
 
 # Javascript
 
+*Our guidelines are mostly based on the AirBnB ESLint config, with a few a couple of modifications*
+
 * If possible, use vanilla Javascript. Don't add jQuery just for a simple DOM manipulation or a simple API call
 * Use Yarn as a package manager: [it's better than NPM](https://www.sitepoint.com/yarn-vs-npm/)
 * The usage of Typescript is encouraged to ensure type safety
@@ -255,7 +261,9 @@ This is an extension of the PHP part of this file
 * Use Logger, rather than `IO.puts`
 * Avoid using the pipe operator just once
 * Parentheses are a must for local or imported zero-arity function calls
-* Add underscores to decimal literals that have six or more digits
+* Add underscores to decimal literals that have six or more digits (`1_000_000`)
+* Don't try to setup concurrency all by yourself, rather use OTP for that (that's the reason you're using Elixir in the first place, right?)
+* Even though Elixir allows it, never, ever, reassign variables!
 * Represent each level of nesting within a module name as a directory, example:
 
 ```elixir
