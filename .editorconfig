@@ -11,6 +11,14 @@ max_line_length = 80
 
 [makefile]
 indent_style = tab
+indent_size = 8
 
 [*.go]
 indent_style = tab
+
+[*.{ex, exs, eex, yml, md, markdown}]
+indent_size = 2
+
+[package.json]
+indent_size = 2
+
