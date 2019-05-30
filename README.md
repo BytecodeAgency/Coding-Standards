@@ -1,6 +1,6 @@
-# Bytecode Digital Agency B.V. Coding Standards
-
 <div style="text-align: center">
+
+# Bytecode Digital Agency B.V. Coding Standards
 
 [![Developed by](https://img.shields.io/badge/Developed%20by-Bytecode.nl-green.svg)](https://bytecode.nl)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
