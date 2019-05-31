@@ -6,9 +6,7 @@ cache:
 
 before_script:
   - npm i -g yarn
-  - yarn
 
 build:
   script:
-    - yarn run build
-    - yarn run build:ts
+    - yarn

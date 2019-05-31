@@ -1,27 +1,22 @@
+<div style="text-align: center">
+
 # Bytecode Digital Agency B.V. Coding Standards
 
 [![Developed by](https://img.shields.io/badge/Developed%20by-Bytecode.nl-green.svg)](https://bytecode.nl)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
-
 [![FOSSA Status](https://app.fossa.io/api/projects/custom%2B4543%2Fgit%40git.bytedev.io%3Abytecode%2Fcoding-standards.git.svg?type=shield)](https://app.fossa.io/projects/custom%2B4543%2Fgit%40git.bytedev.io%3Abytecode%2Fcoding-standards.git?ref=badge_shield)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/59b7a5078ae345fd9c5fb4f4e27d59aa)](https://www.codacy.com/app/lucianonooijen/coding-standards_2?utm_source=git.bytedev.io&amp;utm_medium=referral&amp;utm_content=bytecode/coding-standards&amp;utm_campaign=Badge_Grade)
+
+</div>
 
 ## About
 
 The coding standards for developers at Bytecode Digital Agency B.V. to ensure code health and quality of the products delivered to our clients.
 
-Please use these standards in every line of code you write. This is not to bully you but to make sure everyone in our company writes code the same way, and this is the only way to assure quality of our code.
-
-This repo also contains files you can use for development. These files are *defaults*, so you can of course edit them to suit the needs of the project.
-
 All of our conventions regarding indentation and such can also be found in the form of an `.editorconfig` file.
 
 Please read this file thoroughly, and also check out the links in the [Final words](#final-words) section. Spending half an hour now can save you many hours during projects!
-
-Remark: _This project also includes our Parcel starter_
 
 # Table of Contents
 
@@ -29,35 +24,37 @@ We will discuss the following points in this Coding Standards file:
 
 * [General](#general)
 * [General Style](#general_style)
+* [Testing](#testing)
 * [Security](#security)
-* [Git](#git)
-* [HTML](#html)
-* [CSS](#css)
-* [CSS-preprocessors](#css-preprocessors)
 * [Javascript](#javascript)
+* [Typescript](#typescript)
 * [PHP](#php)
 * [WordPress](#wordpress)
 * [Python](#python)
 * [Elixir](#elixir)
+* [HTML](#html)
+* [CSS](#css)
+* [CSS-preprocessors](#css-preprocessors)
+* [Git](#git)
+* [Docker](#docker)
 
 # General
 
-These are the general rules we use for writing software.
-
-* **Write clean code!**
+* **Write clean code at all times!**
+* Functional programming over object oriented programming, over procedural programming (in most cases)
 * Structure your work in a way that other developers can easily understand it. This means having the possibility of co-workers modifying your code in the back of your mind
-* Document your code for end users, and when writing small and general functions
 * [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself): Don't repeat yourself! Don't build long functions that do a specific thing, but try to create smaller and more general functions
 * Write [SOLID](https://en.wikipedia.org/wiki/SOLID) code
-* When writing a part of a project that is essential to other systems, write unit tests to make sure these systems can depend on your code
-* When starting on a project, try to pick the best tool for the job. Be sure to discuss this with your superior, as this can have a lot of impact on a project
-* Use a clean folder structure. There is no default folder structure, because this depends on the kind of product. Just to be sure your colleagues can work with your code, discuss your proposal for the project folder structure with your superior
-* Write your code with the latest techniques, and let tools like Babel or PostCSS take care of backwards compatibility
-* For production, uglify/minify your code and remove source maps
-* All communication on GitLab and all documentation (and everything else in Git repos) should be in English
+* Extensive documentation does not make up for bad code, code should be self-documenting
+* When starting on a project, try to pick the best tool for the job. Be sure to discuss this with your team, as this can have a lot of impact on a project
+* Save data in a database, not in a file on the server, as some services run in Kubernetes
+* Use a clean folder structure. There is no default folder structure, because this depends on the kind of product. Just to be sure your colleagues can work with your code, discuss your proposal for the project folder structure with your team members
+* All communication on GitLab and all documentation (and everything else in Git repos) should be in English, even if all team members are Dutch-speaking
+* Use separate development, staging and production environments, don't develop on live!
 
 # General Style
 
+* Follow the rules of the linters used for the project
 * Don't use "Yoda" conditions, as these make it harder to read your code at a glance
 * Use camelCase and use single quotes (unless the language does not allow this). This is mostly taken care of by our linters
 * Indent using *4 _spaces_*. This implies that tab characters should not be used for indentation. Set your code editor to convert tabs to 4 spaces.
@@ -65,148 +62,64 @@ These are the general rules we use for writing software.
 * Try to keep your lines at max 80 character width, with a hard limit of 100 characters (indentation included). This is also taken care of by our linters
 * Avoid trailing whitespaces
 * For single line comments, use `// comment`, for multi-line comments, use `/** * comment */`
-* Make sure your code is readable. This means using clear names for your functions, adding enough (although not too many) comments and adding enough and a consistent amount of whitespace. The latter is mostly taken care of by our linters
-* On that subject: use linters, and let the linter check your code before committing on Git. You can also use git-hooks to lint your code as you commit
+* Make sure your code is readable. This means using clear names for your functions and adding enough and a consistent amount of whitespace. The latter is mostly taken care of by our linters
 * Leave an empty last line in every file (a `\n` character)
-* If the project allows it, unit and integration tests are highly appreciated
-* If possible, behaviour-driven development and test-driven development approaches are encouraged
+
+# Testing
+
+* Where possible, tests should be present, this includes unit, integration and end-to-end tests
+* Test-driven development (TDD) is highly encouraged!
+* At Bytecode, we aim to always achieve at least 80% of test coverage, preferably 90%+
+* For all projects (even for HTML websites and WordPress themes), a CI-pipeline should be set up, to ensure the code compiles, there are no missing dependencies and there are no linting errors
+* Always test your own code before sending your code to QA or requesting a merge-request review
 
 # Security
 
 * For security reasons try to avoid using FTP, rather use SFTP or connect through SSH and pull from the Git repo (with a deploy key)
 * When using SSH, if possible, use an SSH-key and not just a password. This is to improve security
 * For deployment using Git, or when setting up Git on a remote server, always use deploy keys, and do not reuse these keys
-* When you add any login credentials or keys in a Git repo, even if it's a private repo with limited access, encrypt the files containing the credentials/keys if possible for maximum security
+* When you add any login credentials or keys in a Git repo, even if it's a private repo with limited access, encrypt the files containing the credentials/keys if possible for maximum security, try to avoid having any sensitive information in version control
 * Make use of (gitignored) `.env` files to keep environment variables secret, and easy to setup between environments
-* Our complete security policy can be found on
-  [security.bytecode.nl](https://security.bytecode.nl)
-
-# Git
-
-* GitLab should be used as main Git server, if needed GitHub can be setup as repository mirror, unless the project will be created as a free open source software project, then GitHub (@BytecodeOpenSource) must be used as the main Git server.
-* Don't merge your own code into the develop/master branch, always create a pull request and let at least one other developer review the code
-* Work on your own branch and name the branch to your first name. If a GitLab Board is used for the project, you can name the branch after the issue name in a GitLab Board
-* Make sure you always add steps in the README.md file for others to make your code run: include the needed global dependencies, commands to install dependencies, and steps to run everything.
-* Git README.md badges are sexy. Add them! For examples, check the top of this repo
-* To make sure your project will run on the computer of others, use tools like TravisCI or GitLab CI for automated testing
-* If your project uses a set of dependencies (like Mongo and Node) working together in a complex way, write a Docker Compose file
-* Write a clear description for your commit which makes clear what was changed or added, fo example: not `"styling updates"`, but rather `"improved styling for the menu dropdown"`
-* Before pushing, see if you are pushing the right files and you are not uploading confidential files or files that should not be in the Git repository. Files that should not be in Git repos include .env files, any credentials (even if they may seem harmless to share), personal data, etc.
-* If your commit is to fix a GitLab issue, include the issue number in your commit message, so your commit/branch will be linked to the correct issue
-* Try to commit at least around every hour or two or after important milestones
-* Use [semantic versioning](https://semver.org/) for production releases
-
-# Docker
-
-* To ensure compatibility between local, development, staging, test and production environments, the use of Docker is encouraged
-* Docker Compose should be used when there are multiple services running, like PHP and MySQL
-* Using Docker Compose for just one container is still encourtaged
-* Always prefer 2 smaller containers over 1 larger one
-* For running services in production, Docker Compose is prefered over systemd, init.d, etc. as it makes deployments much easier
-* Usage of Linux Alpine is prefered, because it is a very light distro and will speed things up a lot
-* Try not to create complete Dockerfile install scripts, rather use existing (and verified safe!) Docker images from the Docker Hub
-* The `docker-compose.yml` file should be the same between environments, so no `-prod.yml`, `-dev.yml` files
-* GitLab can be used as container repository
-
-# HTML
-
-* Use external files to include styling and scripts (never use in-line styling).
-* Use `<link rel="stylesheet" href="style.css">` and not `@import` to add styling. For scripts use `<script src="codeguide.js" />`
-* For your own code, you can include just 1 script file and 1 stylesheet, so combine everything using tools like Gulp, Parcel or Webpack
-* Add an `alt` tag to images
-* Use double quotes like `<a href="#">`, not single quotes like `<a href='#'>`
-* Write your code with XHTML in mind, so use `<br/>` and not just `<br>`, because there is always a chance your code will later be converted into a React app. *Side Note: using `<br>` in your HTML is not very semantic, use CSS for white space please* :angel:
-* Make us of the HTML5 elements `<article>, <nav>, <aside>, <details>, <header>, <footer>, <section>`, instead of `<div>` where appropriate.
-* _Only_ leave an empty line between parts of the page, like the navigation, or `<section>` tags
-* For templating, you can always use Handlebars. If you like to use another templating engine like, like Pug or ejs, discuss this with your superior
-* Use the following order of attributes on HTML-elements:
-  1. src, for, type, href, value
-  2. id, name
-  3. class
-  4. data-*
-  5. title, alt
-  6. role, aria-*
-* Use the following "basic" structure for HTML documents
-
-```html
-<!DOCTYPE html>
-<html lang="nl">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="tekst">
-    <meta name="keywords" content="tekst">
-    <title>Document</title>
-    [css dependencies]
-    [font dependencies]
-  </head>
-  <body>
-  Content goes here
-  [javascript dependencies]
-  </body>
-</html>
-```
-
-# CSS
-
-* Try not to use CSS, rather use SASS/SCSS
-* We strive to use as few CSS frameworks as possible. So only include a CSS framework/library after discussing
-* If you are using Bootstrap _(try not to use the whole framework, just the grid system)_, you can use Bootstrap 4, not Bootstrap 3, only if you have to work with legacy code that already includes Bootstrap 3
-* If you are using another framework that uses px-units, use px, else use rem-values *(rem values scale with the HTML-object's font-size, which makes responsive typography a whole lot easier)*
-* If the used frameworks allow it, write your media queries mobile first, like `@media (min-width: 30rem)`
-* List related items together
-* If a :hover pseudo class is styled, style :focus the same for accessibility
-* Try to never use IDs, use classes
-* Use [BEM](http://getbem.com/naming/) for naming CSS classes
-* Name classes descriptively
-* Use double quotes, not single quotes
-* Use only one declaration per line, this makes the code more readable
-* Add a space after the colon of a declaration, so not `margin:1rem;` but `margin: 1rem;`
-* For font-sizes, use an exponential scale, preferably based on the Fibonacci number (1.618) [Click here to geek out](https://3.7designs.co/blog/2010/10/how-to-design-using-the-fibonacci-sequence/). There is also a Sass plugin available for modular scales like this. You can find the plugin [here](https://github.com/modularscale/modularscale-sass)
-* For colors, use hex values (not rgb or rgba), as short as possible, and in lowercase, for example: not `#FFFFFF` but `#fff`, and not `background-color: #fff` but `background: #fff`
-* A zero (0) should not have unit
-* Try to work with floats as little as possible, rather use flexbox or CSS grids
-* If you are writing emails, use of the MJML preprocessor is encouraged
-
-# CSS preprocessors
-
-* Currently, SCSS is preferred for a project. If you want to use something else, discuss this with your superior
-* Do not use extends, but use mixins
-* Make use of the functionalities the preprocessor gives you! Don't do stuff yourself that a preprocessor can take care off for you
-* You can compile your code to CSS using toolkits like Webpack or Gulp, although currently Parcel Bundler is the prefered method
-* Don't go and add prefixes by hand. Instead, let a plugin handle this for you
-* Try to avoid nesting, rather use BEM. Use of nesting is mostly resticted to :hover-states etc.
-* When you do nest, make it at most 3 levels deep
-* Provide the media queries rules inside the element
-* Break files out into small modules (avoid having a file that is larger than 100 lines)
-* Avoid using IDs throughout the site. Use IDs for parent elements. Example: Header, Footer, Main. Using Classes avoids having to use !important
-* For shameful code, use the *_shame.scss file*. We all have to do this sometimes, better own up to it. [More Geeky links](https://csswizardry.com/2013/04/shame-css/)
-* Use the folder structure as given in this project
+* Try to avoid writing SQL statements yourself, use a query builder like [KnexJS](https://knexjs.org)
+* When writing SQL statements always make use of prepared statements
+* Our complete security policy can be found on [security.bytecode.nl](https://security.bytecode.nl)
 
 # Javascript
 
-*Our guidelines are mostly based on the AirBnB ESLint config, with a few a couple of modifications*
+*Our guidelines are mostly based on the Airbnb ESLint config, with a few a couple of modifications*
 
-* If possible, use vanilla Javascript. Don't add jQuery just for a simple DOM manipulation or a simple API call
-* Use Yarn as a package manager: [it's better than NPM](https://www.sitepoint.com/yarn-vs-npm/)
 * The usage of Typescript is encouraged to ensure type safety
-* For linting, use ESLint (eslintrc is included in this repository). You're encouraged to use modules on top of ESLint like [Prettier](https://prettier.io/)
-* Write your code in ESNext/ES6+, and transpile using Babel to ES5 because Internet Explorer :pensive:
-* Before adding a library, discuss with your superior
+* For Javascript testing, [Jest](https://jestjs.io/) is the prefered testing tool
+* Write Javascript using the latest standards, then transpile to ES5 for production code
+* Only use `let` and `const`, not `var`, and try to not use classes
+* For websites not built on a Javascript-framework, try to work just with vanilla Javascript, and try to avoid jQuery
+* Use Yarn as a package manager: [it's better than NPM](https://www.sitepoint.com/yarn-vs-npm/)
 * Put semi-colons on the end of your lines, like you would in C-style languages
-* Don't use anonymous functions (`function test() {}`), write them like this: `const test = () => {}`
-* When using jQuery, write it using `$('selector');` and not using `jQuery('selector');`, except when it gives compatiblity issues
+* Use arrow functions (`const foo = () => bar()`) where possible
+* When writing an arrow function with one argument, don't use brackets (`const foo = arg => bar(arg)`)
 * Comment your code following the [ESDoc](https://esdoc.org/) notation, it's understood by (almost) every code editor and IDE
+
+# Typescript
+
+* Unless working with untyped legacy Javascript-code, don't use implicit any
+* Use PascalCase for classes, types, namespaces, enums and enum members
+* Don’t use the types Number, String, Boolean, or Object, as these types refer to non-primitive boxed object<Plug>CocRefresh
+* Annotate arrays as `members: Member[]`, rather than `members: Array<Member>`
+* For objects, use `foo: {}` over `foo: object`
+* For React in Typescript (TSX), type your functional components using `React.FC`
+* For React component files, use `PascalCaseComponent.tsx` for filenames, otherwise don't use capital letters in filenames
+* Use "T" for the type variable if only one is needed.
+* Do not prefix your interfaces with "I", so use `interface Member{}` over  `Interface IMember {}`
+* Prefer interface over type, use type when you need a union or intersection
 
 # PHP
 
-* For server side stuff we prefer using NodeJS/Python over PHP, so only use PHP when necessary
+* For server side programming we prefer using NodeJS/Python over PHP, so only use PHP when necessary
 * Use a clean folder structure and use include to add other files. Make sure files don't get longer than 200 lines
 * For reasonably sized projects, use the MVC structure
 * If you are storing user data, especially passwords, you **must** use a framework like Laravel, because you really *really* shouldn't mess with storing that stuff yourself
 * PHP is notorious for ugly code, so be aware of this and write your code *extra* clean
-* Always use PHP 7.1+
+* Always use PHP 7.0+
 
 # WordPress
 
@@ -219,7 +132,6 @@ This is an extension of the PHP part of this file
 * Never write MySQL queries yourself, use `$wpdb`
 * Enqueue your stylesheets by hand, not just in the style.css file
 * For your custom styles and scripts, use Webpack or Gulp
-* Use separate development, staging and production environments
 * If possible, use the tools from [Roots.io](https://roots.io/)
 
 # Python
@@ -228,7 +140,7 @@ This is an extension of the PHP part of this file
 * For Docstring Conventions, check [PEP 257 Docstring Conventions](https://www.python.org/dev/peps/pep-0257/)
 * Always write your code in Python 3, if possible
 * For creating virual environments for Python, the usage of 'pipenv' is preferred over 'virtualenv'
-* To ensure your code will not just run on your computer, make use of 'pipenv', to standardize, [Tox](https://tox.readthedocs.io/en/latest/) is a great tool, or you can use Docker of course
+* To ensure your code will not just run on your computer, make use of 'pipenv', to standardize, [Tox](https://tox.readthedocs.io/en/latest/) is a great tool, or you can use Docker of course, in addition to a CI testing script
 * Make sure there is always a `requirements.txt` file available, so dependencies are the same on different environments
 * Where possible, use type checking
 
@@ -258,8 +170,7 @@ This is an extension of the PHP part of this file
 * Make exception names end with a trailing `Error`
 * Always include `@type` and `@spec` declarations
 * Always use Dialyzer/Dialyxir to analyze your code
-* Use Logger, rather than `IO.puts`
-* Avoid using the pipe operator just once
+* Use Logger, rather than `IO.puts` in production code
 * Parentheses are a must for local or imported zero-arity function calls
 * Add underscores to decimal literals that have six or more digits (`1_000_000`)
 * Don't try to setup concurrency all by yourself, rather use OTP for that (that's the reason you're using Elixir in the first place, right?)
@@ -273,9 +184,77 @@ defmodule Parser.Core.XMLParser do
 end
 ```
 
+# HTML
+
+* Don't use inline styling or inline Javascript, don't import styling using `@import`, use `<link>`
+* For production, uglify/minify your code, remove source maps and combine all files into one CSS file and one Javascript file
+* Use double quotes like `<a href="#">`, not single quotes like `<a href='#'>`
+* Write your code with XHTML in mind, so use `<br/>` and not just `<br>`, because there is always a chance your code will later be converted into a React app. *Side Note: using `<br>` in your HTML is not very semantic, use CSS for white space please* :angel:
+* Make us of the HTML5 elements `<article>, <nav>, <aside>, <details>, <header>, <footer>, <section>`, instead of `<div>` where appropriate.
+* _Only_ leave an empty line between parts of the page, like the navigation, or `<section>` tags
+* For templating, try to use a templating language like Handlebars.
+* Make sure all responsive, accessibility and SEO tags are present!
+
+# CSS
+
+* Try not to use CSS, rather use SASS/SCSS, and try to avoid CSS frameworks
+* If you are using another framework that uses px-units, use px, else use rem-values *(rem values scale with the HTML-object's font-size, which makes responsive typography a whole lot easier)*
+* If the project allows it, write your media queries mobile first, like `@media (min-width: 30rem)`
+* If a :hover pseudo class is styled, style :focus the same for accessibility
+* Try to never use IDs as selector, use classes, avoid `!important`
+* Use [BEM](http://getbem.com/naming/) for naming CSS classes
+* Name classes descriptively
+* Use double quotes, not single quotes
+* Use only one declaration per line, this makes the code more readable
+* Add a space after the colon of a declaration, so not `margin:1rem;` but `margin: 1rem;`
+* For font-sizes, use an exponential scale, preferably based on the Fibonacci number (1.618) [Click here to geek out](https://3.7designs.co/blog/2010/10/how-to-design-using-the-fibonacci-sequence/). There is also a Sass plugin available for modular scales like this. You can find the plugin [here](https://github.com/modularscale/modularscale-sass)
+* For colors, use hex values (not rgb or rgba), as short as possible, and in lowercase, for example: not `#FFFFFF` but `#fff`, and not `background-color: #fff` but `background: #fff`
+* A zero (0) should not have unit
+* Always prefer Flexbox and Grid over floats
+* If you are writing emails, use of the MJML preprocessor is encouraged
+* When working with ReactJS, the use of [Styled Components](https://www.styled-components.com/) is encouraged over plain CSS/SCSS
+
+# CSS preprocessors
+
+* Currently, SCSS is preferred for a project (if the project is not written in React). If you want to use something else, discuss this with your team
+* Do not use extends, but use mixins
+* Don't go and add prefixes by hand or by using mixins. Instead, let a compiler/plugin handle this for you
+* Try to avoid nesting, rather use BEM. Use of nesting is mostly resticted to :hover-states etc.
+* When you do nest, make it at most 3 levels deep
+* Provide the media queries rules inside the element
+* Break files out into small modules
+* For shameful code, use the *_shame.scss file*. We all have to do this sometimes, better own up to it. [More Geeky links](https://csswizardry.com/2013/04/shame-css/)
+
+# Git
+
+* GitLab should be used as main Git server, if needed GitHub can be setup as repository mirror, unless the project will be created as a free open source software project, then GitHub (@BytecodeOpenSource) must be used as the main Git server.
+* All code merged to the `develop` and `master` branches must have gone through a code review
+* Don't commit compiled files
+* Work on a branch based on the issue you are working on, when using GitLab, use the issue number
+* Make sure you always add steps in the README.md file for others to make your code run: include the needed global dependencies, commands to install dependencies, and steps to run everything, both in development and production.
+* Write a clear description for your commit which makes clear what was changed or added, fo example: not `"styling updates"`, but rather `"improved styling for the menu dropdown"`
+* Commit often, and don't commit for multiple issues at once, make separate commits
+* Before opening a mergeable merge-request, all acceptance criteria should be met
+* Use [semantic versioning](https://semver.org/) for production releases
+
+# Docker
+
+* To ensure compatibility between local, development, staging, test and production environments, the use of Docker is encouraged
+* Docker Compose should be used when there are multiple services running, like NodeJS and PostgreSQL
+* Always prefer 2 smaller containers over 1 larger one
+* Usage of Linux Alpine is prefered, because it is a very light distro and will speed things up a lot
+* Try not to create complete Dockerfile install scripts, rather use existing (and verified safe!) Docker images from the Docker Hub
+* The `docker-compose.yml` file should be the same between environments, so no `-prod.yml`, `-dev.yml` files
+* GitLab can be used as container registry
+
 # Final words
 
 Some final words of this Coding Guidelines file:
+
+#### Recommended books about clean code
+
+* "Clean Code" by Robert C. Martin (Uncle Bob)
+* "The Clean Coder" by Robert C. Martin (Uncle Bob)
 
 #### Sources
 
@@ -296,6 +275,7 @@ The following sources are used for the creation of this Coding Guidelines file, 
 
 #### Starter packs
 
+* Try to not use starter packs at all
 * This repo for Parcel/Handlebars development
 * [Mega Boiler Plate](http://megaboilerplate.com/)
 
