@@ -86,7 +86,7 @@ We will discuss the following points in this Coding Standards file:
 
 # Typescript
 
-* Unless working with untyped legacy Javascript-code, don't use implicit any,
+* Unless working with untyped legacy Javascript-code, don't use implicit any
 * Use PascalCase for classes, types, namespaces, enums and enum members
 * Don’t use the types Number, String, Boolean, or Object, as these types refer to non-primitive boxed object<Plug>CocRefresh
 * Annotate arrays as `members: Member[]`, rather than `members: Array<Member>`
