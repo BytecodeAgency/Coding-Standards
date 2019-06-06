@@ -88,7 +88,8 @@ We will discuss the following points in this Coding Standards file:
 
 * Unless working with untyped legacy Javascript-code, don't use implicit any
 * Use PascalCase for classes, types, namespaces, enums and enum members
-* Don’t use the types Number, String, Boolean, or Object, as these types refer to non-primitive boxed object<Plug>CocRefresh
+* Don’t use the types Number, String, Boolean, or Object, as these types refer to non-primitive boxed object, use the lower case variants
+* Try to avoid using the `any` type, for generics, use a type variable like `<T>`
 * Annotate arrays as `members: Member[]`, rather than `members: Array<Member>`
 * For objects, use `foo: {}` over `foo: object`
 * The use of `async await` is prefered over generator functions
