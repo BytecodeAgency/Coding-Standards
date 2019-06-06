@@ -105,11 +105,11 @@ We will discuss the following points in this Coding Standards file:
 * Don't create `index.ts` files to export default other files, we prefer the longer import path (`import Button from 'components/Button/Button'`) over `index.ts(x)` files everywhere
 * Put related files in subfolders, together with test files, for example:
 
-    ```
-    /src/components/Button/Button.tsx
-    /src/components/Button/Button.types.ts
-    /src/components/Button/Button.test.tsx
-    ```
+```
+/src/components/Button/Button.tsx
+/src/components/Button/Button.types.ts
+/src/components/Button/Button.test.tsx
+```
 
 # Javascript
 
