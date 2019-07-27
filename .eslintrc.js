@@ -14,7 +14,8 @@ module.exports = {
             jsx:  true,
         },
     },
-    "rules": {
-        "prettier/prettier": ["error"]
+    rules: {
+        "prettier/prettier" : ["error"],
+        "@typescript-eslint/explicit-function-return-type": 0,
     }
 }
