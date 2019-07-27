@@ -1,19 +1,12 @@
 module.exports = {
     clearMocks: true,
-    coverageDirectory: "coverage",
-    moduleFileExtensions: [
-        "ts",
-        "tsx",
-        "js",
-        "jsx",
-        "json",
-        "node"
-    ],
-    //setupFiles: ['./tests/config/global-setup.ts'],
-    testEnvironment: "node",
-    testRegex: "tests\/(.*).(test|spec).ts?",
+    coverageDirectory: 'coverage',
+    moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+    // setupFiles: ['./tests/config/global-setup.ts'],
+    testEnvironment: 'node',
+    testRegex: 'tests/(.*).(test|spec).ts?',
     transform: {
-        "^.+\\.tsx?$": "ts-jest",
+        '^.+\\.tsx?$': 'ts-jest',
     },
 
     globals: {
