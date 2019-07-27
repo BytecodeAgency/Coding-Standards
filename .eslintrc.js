@@ -1,12 +1,18 @@
 module.exports = {
     parser:  '@typescript-eslint/parser',
     extends:  [
-        'airbnb',
         'plugin:@typescript-eslint/recommended',
-        'prettier/@typescript-eslint',
+        'airbnb',
         'plugin:prettier/recommended',
+        'prettier',
+        'prettier/react',
+        'prettier/@typescript-eslint',
     ],
-    plugins: ["security", "prettier"],
+    plugins: [
+        "jest",
+        "security",
+        "prettier"
+    ],
     parserOptions:  {
         ecmaVersion:  2018,
         sourceType:  'module',
@@ -17,5 +23,8 @@ module.exports = {
     rules: {
         "prettier/prettier" : ["error"],
         "@typescript-eslint/explicit-function-return-type": 0,
+    },
+    env: {
+        jest: true,
     }
 }
