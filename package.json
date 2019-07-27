@@ -7,7 +7,8 @@
   "license": "GPL-3.0",
   "private": false,
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint './**/*'",
+    "lint:fix": "eslint './**/*' --fix",
     "reinstall": "rm -rf node_modules && yarn"
   },
   "dependencies": {},
