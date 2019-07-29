@@ -27,7 +27,7 @@ echo -e '\n\n\nDownloading config files using wget\n\n\n'
 wget https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.eslintrc.js
 wget https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.eslintignore
 wget https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.prettierrc.js
-wget https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.tsconfig.js
+wget https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/tsconfig.json
 
 echo "\n\n\nCompleted! If you see no errors you're good to go!"
 
