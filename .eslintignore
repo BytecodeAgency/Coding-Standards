@@ -1,0 +1,9 @@
+*
+!**/*.js
+!**/*.jsx
+!**/*.ts
+!**/*.tsx
+build/
+coverage/
+dist/
+node_modules/
