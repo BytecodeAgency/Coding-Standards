@@ -1,0 +1,34 @@
+#!/bin/sh
+
+echo -e '\n\n\nInstalling Typescript\n\n\n'
+yarn add -D typescript 1> /dev/null
+
+echo -e '\n\n\nInstalling ESLint and Prettier dependencies\n\n\n'
+yarn add -D \
+    @typescript-eslint/eslint-plugin \
+    @typescript-eslint/parser \
+    eslint \
+    eslint-config-airbnb \
+    eslint-config-prettier \
+    eslint-plugin-import \
+    eslint-plugin-jest \
+    eslint-plugin-jsx-a11y \
+    eslint-plugin-prettier \
+    eslint-plugin-react \
+    eslint-plugin-security \
+    prettier 1> /dev/null
+
+echo -e '\n\n\nInstalling Jest dependencies\n\n\n'
+yarn add -D \
+    jest \
+    ts-jest 1> /dev/null
+
+echo -e '\n\n\nDownloading config files using wget\n\n\n'
+wget https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.eslintrc.js
+wget https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.eslintignore
+wget https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.prettierrc.js
+wget https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.tsconfig.js
+
+echo "\n\n\nCompleted! If you see no errors you're good to go!"
+
+echo "Make sure to add scripts for `eslint './**/*'` and Jest to your package.json"
