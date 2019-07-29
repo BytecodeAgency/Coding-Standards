@@ -18,6 +18,8 @@ All of our conventions regarding indentation and such can also be found in the f
 
 Please read this file thoroughly, and also check out the links in the [Final words](#final-words) section. Spending half an hour now can save you many hours during projects!
 
+*For installing all Javascript/Typescript linting dependencies, you can use a shell script, just run `curl https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/bin/bootstrap | bash` while within the repo you want to bootstrap*
+
 # Table of Contents
 
 We will discuss the following points in this Coding Standards file:
