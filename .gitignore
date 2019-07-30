@@ -1,3 +1,6 @@
+# Project specific
+# Put your project specific gitignores here
+
 # OS specific
 .DS_Store
 .DS_Store?
@@ -10,20 +13,22 @@ Thumbs.db
 # General
 build/
 dist/
-docs/
+coverage/
 .next/
 .cache/
 .env
-
-# Misc
-.idea/
-.env
 .npm
-coverage
-docs/
-.cache/
+
+# Node specific
+node_modules/
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Code editors
+.idea/
 *.swp
 *.swo
 .idea/
@@ -49,14 +54,6 @@ docs/
 *.ear
 *.sar
 *.class
-
-# Node specific
-node_modules/
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # WordPress specific (for public projects)
 wp-config.php
