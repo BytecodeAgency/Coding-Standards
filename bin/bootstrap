@@ -51,7 +51,7 @@ echo "Make sure to add these scripts to your package.json:"
 echo '"start": "ts-node -r tsconfig-paths/register src/index.ts",'
 echo '"dev": "nodemon",'
 echo '"build": "tsc --build tsconfig.json",'
-echo '"lint": "eslint src --ext .ts",'
+echo '"lint": "eslint src/**/*.ts",'
 echo '"lint:fix": "yarn run lint --fix",'
 echo '"test": "jest",'
 echo '"test:watch": "jest --watch",'
