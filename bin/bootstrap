@@ -31,15 +31,15 @@ yarn add -D \
     tsconfig-paths 1> /dev/null
 
 echo -e "\n\n\nDownloading config files using wget\n\n\n"
-wget https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.gitignore 1> /dev/null
-wget https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.gitlab/CODEOWNERS 1> /dev/null && mkdir .gitlab && mv CODEOWNERS .gitlab
-wget https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.editorconfig 1> /dev/null
-wget https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.nodemon.jso 1> /dev/nulln
-wget https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/jest.config.js 1> /dev/null
-wget https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.eslintrc.js 1> /dev/null
-wget https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.eslintignore 1> /dev/null
-wget https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.prettierrc.js 1> /dev/null
-wget https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/tsconfig.json 1> /dev/null
+wget -q https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.gitignore
+wget -q https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.gitlab/CODEOWNERS && mkdir .gitlab && mv CODEOWNERS .gitlab
+wget -q https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.editorconfig
+wget -q https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.nodemon.jso
+wget -q https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/jest.config.js
+wget -q https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.eslintrc.js
+wget -q https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.eslintignore
+wget -q https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/.prettierrc.js
+wget -q https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/tsconfig.json
 
 echo "\n\n\nCreating file structure\n\n\n"
 mkdir src
