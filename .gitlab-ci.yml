@@ -1,0 +1,34 @@
+image: node:12-alpine
+stages:
+  - build
+  - deploy
+cache:
+  paths:
+    - node_modules/
+    - website/node_modules/
+
+build-docs:
+  stage: build
+  before_script:
+    - npm i -g yarn
+    - cd website
+    - yarn
+  script:
+    - yarn run build
+    - mv build ../build
+  artifacts:
+    paths:
+      - build/
+
+pages:
+  image: alpine:3.9
+  stage: deploy
+  dependencies:
+    - build-docs
+  script:
+    - mv build public
+  artifacts:
+    paths:
+      - public
+#   only:
+#     - master
