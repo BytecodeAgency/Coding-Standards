@@ -1,4 +1,10 @@
-# PHP
+---
+id: php
+title: PHP and WordPress
+sidebar_label: PHP and WordPress
+---
+
+## PHP
 
 * For server side programming we prefer using NodeJS/Python over PHP, so only use PHP when necessary
 * Use a clean folder structure and use include to add other files. Make sure files don't get longer than 200 lines
@@ -7,7 +13,7 @@
 * PHP is notorious for ugly code, so be aware of this and write your code *extra* clean
 * Always use PHP 7.0+
 
-# WordPress
+## WordPress
 
 This is an extension of the PHP part of this file
 

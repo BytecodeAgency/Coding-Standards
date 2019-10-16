@@ -1,4 +1,10 @@
-# HTML
+---
+id: htmlcss
+title: HTML, CSS and CSS Preprocessors
+sidebar_label: HTML, CSS
+---
+
+## HTML
 
 * Don't use inline styling or inline Javascript, don't import styling using `@import`, use `<link>`
 * For production, uglify/minify your code, remove source maps and combine all files into one CSS file and one Javascript file
@@ -9,7 +15,7 @@
 * For templating, try to use a templating language like Handlebars.
 * Make sure all responsive, accessibility and SEO tags are present!
 
-# CSS
+## CSS
 
 * Try not to use CSS, rather use SASS/SCSS, and try to avoid CSS frameworks
 * If you are using another framework that uses px-units, use px, else use rem-values *(rem values scale with the HTML-object's font-size, which makes responsive typography a whole lot easier)*
@@ -28,7 +34,7 @@
 * If you are writing emails, use of the MJML preprocessor is encouraged
 * When working with ReactJS, the use of [Styled Components](https://www.styled-components.com/) is encouraged over plain CSS/SCSS
 
-# CSS preprocessors
+## CSS preprocessors
 
 * Currently, SCSS is preferred for a project (if the project is not written in React). If you want to use something else, discuss this with your team
 * Do not use extends, but use mixins

@@ -1,4 +1,8 @@
-# Elixir
+---
+id: elixir
+title: Elixir
+sidebar_label: Elixir
+---
 
 *These guidelines are based on [The Elixir Style Guide](https://github.com/christopheradams/elixir_style_guide) and [Elixir Style Guide](https://github.com/lexmag/elixir-style-guide)*
 

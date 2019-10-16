@@ -1,4 +1,20 @@
-# General
+---
+id: general
+title: General
+sidebar_label: General
+---
+
+## About
+
+The coding standards for developers at Bytecode Digital Agency B.V. to ensure code health and quality of the products delivered to our clients.
+
+All of our conventions regarding indentation and such can also be found in the form of an `.editorconfig` file.
+
+Please read this file thoroughly, and also check out the links in the [Final words](#final-words) section. Spending half an hour now can save you many hours during projects!
+
+*For installing all Javascript/Typescript linting dependencies, you can use a shell script, just run `curl https://raw.githubusercontent.com/BytecodeAgency/Coding-Standards/master/bin/bootstrap | bash` while within the repo you want to bootstrap*
+
+## General
 
 * **Write clean code at all times!**
 * Functional programming over object oriented programming, over procedural programming (in most cases)
@@ -12,7 +28,7 @@
 * All communication on GitLab and all documentation (and everything else in Git repos) should be in English, even if all team members are Dutch-speaking
 * Use separate development, staging and production environments, don't develop on live!
 
-# General Style
+## General Style
 
 * Follow the rules of the linters used for the project
 * Don't use "Yoda" conditions, as these make it harder to read your code at a glance

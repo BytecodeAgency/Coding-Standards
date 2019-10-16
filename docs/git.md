@@ -1,4 +1,8 @@
-# Git
+---
+id: git
+title: Git
+sidebar_label: Git
+---
 
 * GitLab should be used as main Git server, if needed GitHub can be setup as repository mirror, unless the project will be created as a free open source software project, then GitHub (@BytecodeOpenSource) must be used as the main Git server.
 * All code merged to the `develop` and `master` branches must have gone through a code review

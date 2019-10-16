@@ -1,4 +1,8 @@
-# Security
+---
+id: security
+title: Security
+sidebar_label: Security
+---
 
 * For security reasons try to avoid using FTP, rather use SFTP or connect through SSH and pull from the Git repo (with a deploy key)
 * When using SSH, if possible, use an SSH-key and not just a password. This is to improve security

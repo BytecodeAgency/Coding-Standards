@@ -1,4 +1,8 @@
-# Python
+---
+id: python
+title: Python
+sidebar_label: Python
+---
 
 * For Python code, the [PEP 8 Style Guide](https://www.python.org/dev/peps/pep-0008/) should be followed
 * For Docstring Conventions, check [PEP 257 Docstring Conventions](https://www.python.org/dev/peps/pep-0257/)

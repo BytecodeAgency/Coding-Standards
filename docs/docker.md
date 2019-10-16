@@ -1,4 +1,8 @@
-# Docker
+---
+id: docker
+title: Docker
+sidebar_label: Docker
+---
 
 * To ensure compatibility between local, development, staging, test and production environments, the use of Docker is encouraged
 * Docker Compose should be used when there are multiple services running, like NodeJS and PostgreSQL

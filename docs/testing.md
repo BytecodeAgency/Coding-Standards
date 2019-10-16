@@ -1,4 +1,8 @@
-# Testing
+---
+id: testing
+title: Testing
+sidebar_label: Testing
+---
 
 * Where possible, tests should be present, this includes unit, integration and end-to-end tests
 * Test-driven development (TDD) is highly encouraged!
