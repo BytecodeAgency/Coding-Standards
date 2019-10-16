@@ -9,10 +9,6 @@ const React = require('react');
 
 const CompLibrary = require('../../core/CompLibrary.js');
 
-const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
-const Container = CompLibrary.Container;
-const GridBlock = CompLibrary.GridBlock;
-
 class HomeSplash extends React.Component {
     render() {
         const { siteConfig, language = '' } = this.props;
@@ -64,9 +60,8 @@ class HomeSplash extends React.Component {
                 <div className="inner">
                     <ProjectTitle siteConfig={siteConfig} />
                     <PromoSection>
-                        <Button href="#try">Try It Out</Button>
-                        <Button href={docUrl('doc1.html')}>Example Link</Button>
-                        <Button href={docUrl('doc2.html')}>Example Link 2</Button>
+                        <Button href={docUrl('general.html')}>General standards</Button>
+                        <Button href={docUrl('htmlcss.html')}>Language specific</Button>
                     </PromoSection>
                 </div>
             </SplashContainer>
