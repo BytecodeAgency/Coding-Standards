@@ -1,4 +1,3 @@
-image: node:10-alpine
 stages:
   - build
   - deploy
@@ -8,6 +7,7 @@ cache:
     - website/node_modules/
 
 build-docs:
+  image: node:10
   stage: build
   before_script:
     - npm i -g yarn
