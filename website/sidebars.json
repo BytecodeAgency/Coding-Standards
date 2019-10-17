@@ -1,0 +1,6 @@
+{
+  "coding-standards": {
+    "General": ["general", "security", "testing", "git", "docker"],
+    "Languages": ["htmlcss", "typescript", "elixir", "python", "php"]
+  }
+}
