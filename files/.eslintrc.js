@@ -1,6 +1,6 @@
 module.exports = {
-    parser:  '@typescript-eslint/parser',
-    extends:  [
+    parser: '@typescript-eslint/parser',
+    extends: [
         'plugin:@typescript-eslint/recommended',
         'airbnb',
         'plugin:prettier/recommended',
@@ -13,11 +13,11 @@ module.exports = {
         "security",
         "prettier"
     ],
-    parserOptions:  {
-        ecmaVersion:  2018,
-        sourceType:  'module',
-        ecmaFeatures:  {
-            jsx:  true,
+    parserOptions: {
+        ecmaVersion: 2018,
+        sourceType: 'module',
+        ecmaFeatures: {
+            jsx: true,
         },
     },
     rules: {
@@ -26,5 +26,5 @@ module.exports = {
     },
     env: {
         jest: true,
-    }
+    },
 }
