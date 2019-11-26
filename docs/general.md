@@ -21,22 +21,77 @@ Please read this file thoroughly, and also check out the links in the [Final wor
 * Structure your work in a way that other developers can easily understand it. This means having the possibility of co-workers modifying your code in the back of your mind
 * [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself): Don't repeat yourself! Don't build long functions that do a specific thing, but try to create smaller and more general functions
 * Write [SOLID](https://en.wikipedia.org/wiki/SOLID) code
-* Extensive documentation does not make up for bad code, code should be self-documenting
-* When starting on a project, try to pick the best tool for the job. Be sure to discuss this with your team, as this can have a lot of impact on a project
-* Save data in a database, not in a file on the server, as some services run in Kubernetes
-* Use a clean folder structure. There is no default folder structure, because this depends on the kind of product. Just to be sure your colleagues can work with your code, discuss your proposal for the project folder structure with your team members
+* Extensive documentation does not make up for bad code, code should be as self-documenting as possible, documentation should cover the last missing pieces of the puzzle
 * All communication on GitLab and all documentation (and everything else in Git repos) should be in English, even if all team members are Dutch-speaking
-* Use separate development, staging and production environments, don't develop on live!
+* Use separate development, staging and production environments, don't develop on live (or directly on any server for that matter!)
 
 ## General Style
 
 * Follow the rules of the linters used for the project
 * Don't use "Yoda" conditions, as these make it harder to read your code at a glance
-* Use camelCase and use single quotes (unless the language does not allow this). This is mostly taken care of by our linters
-* Indent using *4 _spaces_*. This implies that tab characters should not be used for indentation. Set your code editor to convert tabs to 4 spaces.
+
+```ts
+// Bad
+if ("someStringToTestAgains" === someValue)
+
+// Good
+if (someValue === "someStringToTestAgains")
+```
+
+* Use double quotes for strings (even if the language allows single quote strings). This is mostly taken care of by our linters
+
+```ts
+// Bad
+const text = 'string';
+
+// Good
+const text = "string";
+```
+
+
+* Indent using *4 _spaces_*. This implies that tab characters should not be used for indentation (unless working in Makefiles or Golang). Set your code editor to convert tabs to 4 spaces.
 * Opening curly braces should be placed on the same line as the method declaration, like `function test() {`, not on a separate line
+
+**Bad**
+
+```ts
+// Bad
+function test() 
+{
+    doSomething();
+}
+
+// Good
+function test() {
+    doSomething();
+}
+```
+
 * Try to keep your lines at max 80 character width, with a hard limit of 100 characters (indentation included). This is also taken care of by our linters
 * Avoid trailing whitespaces
 * For single line comments, use `// comment`, for multi-line comments, use `/** * comment */`
+
+**Bad**
+
+```ts
+// Some
+// multi line 
+// commment
+
+/* Single line commment */
+```
+
+**Good**
+
+```ts
+/**
+ * Some 
+ * multi line 
+ * commment
+ */
+
+// Single line commment
+```
+
 * Make sure your code is readable. This means using clear names for your functions and adding enough and a consistent amount of whitespace. The latter is mostly taken care of by our linters
 * Leave an empty last line in every file (a `\n` character)
