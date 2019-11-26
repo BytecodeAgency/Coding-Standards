@@ -24,16 +24,16 @@ Please read this file thoroughly, and also check out the links in the [Final wor
 
 We will discuss the following points in this Coding Standards file:
 
-* [General](./content/general)
-* [Testing](./content/testing)
-* [Security](./content/security)
-* [Typescript](./content/languages/typescript)
-* [PHP](./content/languages/php)
-* [Python](./content/languages/python)
-* [Elixir](./content/languages/elixir)
-* [HTML, CSS, SASS](./content/languages/html)
-* [Git](./content/git)
-* [Docker](./content/docker)
+* [General](./docs/general)
+* [Testing](./docs/testing)
+* [Security](./docs/security)
+* [Typescript](./docs/typescript)
+* [PHP](./docs/php)
+* [Python](./docs/python)
+* [Elixir](./docs/elixir)
+* [HTML, CSS, SASS](./docs/html)
+* [Git](./docs/git)
+* [Docker](./docs/docker)
 
 # Final words
 
