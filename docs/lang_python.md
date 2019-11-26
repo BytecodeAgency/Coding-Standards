@@ -1,5 +1,5 @@
 ---
-id: python
+id: lang_python
 title: Python
 sidebar_label: Python
 ---

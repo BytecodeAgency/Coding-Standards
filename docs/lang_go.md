@@ -1,5 +1,5 @@
 ---
-id: go
+id: lang_go
 title: Go
 sidebar_label: Go
 ---

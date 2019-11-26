@@ -1,5 +1,5 @@
 ---
-id: typescript
+id: lang_typescript
 title: Typescript and Javascript
 sidebar_label: Typescript and Javascript
 ---
@@ -128,6 +128,7 @@ const Example = () => {
             <button onClick={increment}>Plus one!</button>
             {count}
         </div>
+    );
 }
 ```
 

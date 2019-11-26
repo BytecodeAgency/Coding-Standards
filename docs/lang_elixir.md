@@ -1,5 +1,5 @@
 ---
-id: elixir
+id: lang_elixir
 title: Elixir
 sidebar_label: Elixir
 ---

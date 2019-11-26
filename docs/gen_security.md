@@ -1,5 +1,5 @@
 ---
-id: security
+id: gen_security
 title: Security
 sidebar_label: Security
 ---

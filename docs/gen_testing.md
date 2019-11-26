@@ -1,5 +1,5 @@
 ---
-id: testing
+id: gen_testing
 title: Testing
 sidebar_label: Testing
 ---

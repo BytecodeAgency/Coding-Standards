@@ -1,5 +1,5 @@
 ---
-id: git
+id: gen_git
 title: Git
 sidebar_label: Git
 ---
