@@ -21,6 +21,10 @@
         "title": "Git",
         "sidebar_label": "Git"
       },
+      "go": {
+        "title": "Go",
+        "sidebar_label": "Go"
+      },
       "htmlcss": {
         "title": "HTML, CSS and CSS Preprocessors",
         "sidebar_label": "HTML, CSS"
