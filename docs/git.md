@@ -12,4 +12,5 @@ sidebar_label: Git
 * Write a clear description for your commit which makes clear what was changed or added, fo example: not `"styling updates"`, but rather `"improved styling for the menu dropdown"`
 * Commit often, and don't commit for multiple issues at once, make separate commits
 * Before opening a mergeable merge-request, all acceptance criteria should be met
-* Use [semantic versioning](https://semver.org/) for production releases
+* Use [semantic versioning](https://semver.org/) for production releases 
+* For versioning, leave the leading `v` in the, so prefer `1.0.0` over `v1.0.0`
