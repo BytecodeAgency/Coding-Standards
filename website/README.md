@@ -16,12 +16,15 @@ This website was created with [Docusaurus](https://docusaurus.io/).
 # Install dependencies
 $ yarn
 ```
+
 2. Run your dev server:
 
 ```sh
 # Start the site
 $ yarn start
 ```
+
+3. The server is now available on: http://localhost:3001/coding-standards/
 
 ## Directory Structure
 
