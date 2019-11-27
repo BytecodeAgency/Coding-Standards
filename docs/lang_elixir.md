@@ -1,5 +1,5 @@
 ---
-id: elixir
+id: lang_elixir
 title: Elixir
 sidebar_label: Elixir
 ---
@@ -26,8 +26,8 @@ sidebar_label: Elixir
     11. @macrocallback
     12. @optional_callbacks
 * Make exception names end with a trailing `Error`
-* Always include `@type` and `@spec` declarations
-* Always use Dialyzer/Dialyxir to analyze your code
+* Try to include `@type` and `@spec` declarations
+* Use Dialyzer/Dialyxir to analyze your code
 * Use Logger, rather than `IO.puts` in production code
 * Parentheses are a must for local or imported zero-arity function calls
 * Add underscores to decimal literals that have six or more digits (`1_000_000`)
@@ -40,4 +40,48 @@ sidebar_label: Elixir
 
 defmodule Parser.Core.XMLParser do
 end
+```
+
+* Dont use parentheses for one-arity functions when using the pipe operator (`|>`)
+
+```elixir
+# Bad
+some_string |> String.downcase |> String.trim
+
+# Good
+some_string |> String.downcase() |> String.trim()
+```
+
+* Use parentheses in function calls, especially inside a pipeline
+
+```elixir
+# Bad
+f 3
+2 |> rem 3 |> g
+
+# Good
+f(3)
+2 |> rem(3) |> g
+```
+
+* Use the pipe operator to chain functions together.
+
+```elixir
+# Bad
+String.trim(String.downcase(some_string))
+
+# Good
+f(3)
+some_string |> String.downcase() |> String.trim()
+```
+
+* Use *bare* variables in the first part of a function chain
+
+```elixir
+# Bad
+String.trim(some_string) |> String.downcase() |> String.codepoints()
+
+# Good
+f(3)
+some_string |> String.trim() |> String.downcase() |> String.codepoints()
 ```

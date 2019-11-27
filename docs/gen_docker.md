@@ -1,5 +1,5 @@
 ---
-id: docker
+id: gen_docker
 title: Docker
 sidebar_label: Docker
 ---

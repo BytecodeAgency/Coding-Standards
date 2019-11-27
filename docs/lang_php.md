@@ -1,5 +1,5 @@
 ---
-id: php
+id: lang_php
 title: PHP and WordPress
 sidebar_label: PHP and WordPress
 ---

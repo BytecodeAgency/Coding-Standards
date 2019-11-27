@@ -15,7 +15,7 @@ indent_size = 8
 
 [*.go]
 indent_style = tab
-indent_size = 8
+indent_size = 4
 
 [*.{ex, exs, eex, yml, md, markdown}]
 indent_size = 2

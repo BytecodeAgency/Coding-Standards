@@ -1,6 +1,13 @@
 {
   "coding-standards": {
-    "General": ["general", "security", "testing", "git", "docker"],
-    "Languages": ["htmlcss", "typescript", "elixir", "python", "php"]
+    "General": [
+      "gen_general", "gen_security", "gen_testing", "gen_git", "gen_docker"
+    ],
+    "Languages": [
+      "lang_htmlcss", "lang_typescript", "lang_elixir", "lang_go", "lang_python", "lang_php"
+    ],
+    "Architecture": [
+      "arch_design", "arch_sources", "arch_appendix"
+    ]
   }
 }

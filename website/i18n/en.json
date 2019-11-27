@@ -5,54 +5,69 @@
     "previous": "Previous",
     "tagline": "The Coding Standards used for projects by Bytecode Digital Agency B.V.",
     "docs": {
-      "docker": {
+      "arch_appendix": {
+        "title": "Appendix"
+      },
+      "arch_design": {
+        "title": "Architectual design"
+      },
+      "arch_sources": {
+        "title": "Sources"
+      },
+      "gen_docker": {
         "title": "Docker",
         "sidebar_label": "Docker"
       },
-      "elixir": {
-        "title": "Elixir",
-        "sidebar_label": "Elixir"
-      },
-      "general": {
+      "gen_general": {
         "title": "General",
         "sidebar_label": "General"
       },
-      "git": {
+      "gen_git": {
         "title": "Git",
         "sidebar_label": "Git"
       },
-      "htmlcss": {
-        "title": "HTML, CSS and CSS Preprocessors",
-        "sidebar_label": "HTML, CSS"
-      },
-      "php": {
-        "title": "PHP and WordPress",
-        "sidebar_label": "PHP and WordPress"
-      },
-      "python": {
-        "title": "Python",
-        "sidebar_label": "Python"
-      },
-      "security": {
+      "gen_security": {
         "title": "Security",
         "sidebar_label": "Security"
       },
-      "testing": {
+      "gen_testing": {
         "title": "Testing",
         "sidebar_label": "Testing"
       },
-      "typescript": {
+      "lang_elixir": {
+        "title": "Elixir",
+        "sidebar_label": "Elixir"
+      },
+      "lang_go": {
+        "title": "Go",
+        "sidebar_label": "Go"
+      },
+      "lang_htmlcss": {
+        "title": "HTML, CSS and CSS Preprocessors",
+        "sidebar_label": "HTML, CSS"
+      },
+      "lang_typescript": {
         "title": "Typescript and Javascript",
         "sidebar_label": "Typescript and Javascript"
+      },
+      "lang_php": {
+        "title": "PHP and WordPress",
+        "sidebar_label": "PHP and WordPress"
+      },
+      "lang_python": {
+        "title": "Python",
+        "sidebar_label": "Python"
       }
     },
     "links": {
       "General": "General",
-      "Languages": "Languages"
+      "Languages": "Languages",
+      "Architecture": "Architecture"
     },
     "categories": {
       "General": "General",
-      "Languages": "Languages"
+      "Languages": "Languages",
+      "Architecture": "Architecture"
     }
   },
   "pages-strings": {
