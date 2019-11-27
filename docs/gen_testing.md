@@ -18,5 +18,4 @@ sidebar_label: Testing
 | - | - | - |
 | Jest | JS/TS | Unit testing and integration testing of logic, including mocks etc.
 | Enzyme | JS/TS | Testing of ReactJS components
-| JUnit | Java | Unit testing and integration testing
 | Testify | Golang | Asserting and mocking in large Go projects

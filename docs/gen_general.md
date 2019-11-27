@@ -52,8 +52,6 @@ const text = "string";
 * Indent using *4 _spaces_*. This implies that tab characters should not be used for indentation (unless working in Makefiles or Golang). Set your code editor to convert tabs to 4 spaces.
 * Opening curly braces should be placed on the same line as the method declaration, like `function test() {`, not on a separate line
 
-**Bad**
-
 ```ts
 // Bad
 function test() 
