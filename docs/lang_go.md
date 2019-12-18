@@ -19,7 +19,7 @@ import of unstable, changing packages.
 package.
 * Embed binary data: to enable single-binary deployments, use tools to add templates and other static
 assets to your binary (e.g. [github.com/gobuffalo/packr](https://github.com/gobuffalo/packr)).
-* Don't under-package, deleting or merging packages is far more easier than splitting big ones up.
+* Don't under-package, deleting or merging packages is easier than splitting big ones up.
 When unsure if a package can be split, do it.
 * Add context to errors, wrapping errors with a custom message provides context as it gets propagated up
 the stack.
