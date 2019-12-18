@@ -13,4 +13,4 @@ sidebar_label: Git
 * Commit often, and don't commit for multiple issues at once, make separate commits
 * Before opening a mergeable merge-request, all acceptance criteria should be met
 * Use [semantic versioning](https://semver.org/) for production releases 
-* For versioning, leave the leading `v` in the, so prefer `1.0.0` over `v1.0.0`
+* For versioning, leave the leading `v` out in the version number, so prefer `1.0.0` over `v1.0.0`
