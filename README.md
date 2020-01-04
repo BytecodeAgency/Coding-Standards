@@ -65,7 +65,7 @@ The following sources are used for the creation of this Coding Guidelines file, 
 
 * Try to not use starter packs at all
 * This repo for Parcel/Handlebars development
-* [Mega Boiler Plate](http://megaboilerplate.com/)
+* [Mega Boiler Plate](https://github.com/sahat/megaboilerplate)
 
 #### Contributors
 
