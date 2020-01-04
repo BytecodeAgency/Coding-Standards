@@ -7,10 +7,9 @@ cache:
     - website/node_modules/
 
 build-docs:
-  image: node:10
+  image: node:12
   stage: build
   before_script:
-    - npm i -g yarn
     - cd website
     - yarn
   script:
