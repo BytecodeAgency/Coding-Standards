@@ -4,6 +4,12 @@ title: Typescript and Javascript
 sidebar_label: Typescript and Javascript
 ---
 
+## React
+
+* With React, we loosly follow the [Fractal structure](https://hackernoon.com/fractal-a-react-app-structure-for-infinite-scale-4dab943092af) guidelines (which is comparable to [Atomic Design](https://cheesecakelabs.com/blog/rethinking-atomic-design-react-projects/))
+* With our React structure, we use the layers `pages` (web) or `screens` (native), `sections`, `containers` and `components` (in this order)
+* To create React(-Native) folders according to the Bytecode Coding Standards, you can use the [Bytecode React CLI](https://github.com/BytecodeAgency/Bytecode-React-CLI)
+
 ## Typescript
 
 * Unless working with untyped legacy Javascript-code, don't use implicit any
